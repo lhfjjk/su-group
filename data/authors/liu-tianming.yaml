@@ -1,0 +1,13 @@
+name:
+  display: "刘天明"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:973142917@qq.com"
+user_groups:
+  - Alumni
+graduation_year: 2020
+avatar: "media/authors/liu-tianming.jpg"

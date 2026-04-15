@@ -1,0 +1,13 @@
+name:
+  display: "阚剑"
+role: "Faculty"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:jkan@fjirsm.ac.cn"
+user_groups:
+  - Faculty
+graduation_year: 2024
+avatar: "media/authors/kan-jian.jpeg"

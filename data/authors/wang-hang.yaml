@@ -1,0 +1,13 @@
+name:
+  display: "汪航"
+role: "Faculty"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:wanghang@fjirsm.ac.cn"
+user_groups:
+  - Faculty
+graduation_year: 2024
+avatar: "media/authors/wang-hang.png"

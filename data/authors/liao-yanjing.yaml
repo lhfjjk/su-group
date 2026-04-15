@@ -1,0 +1,13 @@
+name:
+  display: "廖滟菁"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:liaoyj@shanghaitech.edu.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2023
+avatar: "media/authors/liao-yanjing.jpg"

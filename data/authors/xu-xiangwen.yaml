@@ -1,0 +1,13 @@
+name:
+  display: "许缃雯"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:XuXiangwen@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2023
+avatar: "media/authors/xu-xiangwen.jpeg"

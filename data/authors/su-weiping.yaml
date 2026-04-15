@@ -1,0 +1,18 @@
+name:
+  display: "Prof. Su Weiping"
+  family: Su
+role: "Group Leader"
+bio: "Prof. Su Weiping is the group leader of the Su Group at the Institute of Chemistry, Chinese Academy of Sciences. His research focuses on dehydrogenative coupling, photocatalysis, and novel synthetic methods."
+interests:
+  - Dehydrogenative Coupling
+  - Photocatalysis
+  - C-H Functionalization
+  - Green Chemistry
+affiliations:
+  - Institute of Chemistry, Chinese Academy of Sciences
+links:
+  - icon: envelope
+    url: "mailto:sup@fjirsm.ac.cn"
+user_groups:
+  - Principal Investigators
+weight: 3

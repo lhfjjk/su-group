@@ -1,0 +1,12 @@
+name:
+  display: "刘子恒"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:liuziheng@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2021

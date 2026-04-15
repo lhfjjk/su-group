@@ -1,0 +1,13 @@
+name:
+  display: "张建晨"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:zhangjianchen@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2021
+avatar: "media/authors/zhang-jianchen.jpg"

@@ -1,0 +1,13 @@
+name:
+  display: "吴焕伟"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:wuhuanwei@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/wu-huanwei.jpg"

@@ -1,0 +1,13 @@
+name:
+  display: "任羽西"
+role: "Faculty"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:yxren@fjirsm.ac.cn"
+user_groups:
+  - Faculty
+graduation_year: 2024
+avatar: "media/authors/ren-yuxi.jpeg"

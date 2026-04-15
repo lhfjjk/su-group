@@ -1,0 +1,13 @@
+name:
+  display: "高越"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:gaoyue192@mails.ucas.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/gao-yue.jpeg"

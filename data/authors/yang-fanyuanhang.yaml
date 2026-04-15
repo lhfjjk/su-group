@@ -1,0 +1,13 @@
+name:
+  display: "扬帆远航"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:FanyuanhangYang@outlook.com"
+user_groups:
+  - Alumni
+graduation_year: 2020
+avatar: "media/authors/yang-fanyuanhang.jpg"

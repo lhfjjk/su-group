@@ -1,0 +1,13 @@
+name:
+  display: "王佳丽"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:wjl15979511355@163.com"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/wang-jiali.jpg"

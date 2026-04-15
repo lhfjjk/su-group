@@ -1,0 +1,12 @@
+name:
+  display: "吴倩"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:wuqian@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022

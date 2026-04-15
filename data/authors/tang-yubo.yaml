@@ -1,0 +1,19 @@
+name:
+  display: "Prof. Tang Yubo"
+  family: Tang
+role: "Principal Investigator"
+bio: "Prof. Tang Yubo is a Principal Investigator at the Institute of Chemistry, Chinese Academy of Sciences. His research focuses on green organic synthesis and novel synthetic methodology."
+interests:
+  - Green Organic Synthesis
+  - C-H Functionalization
+  - Catalytic Chemistry
+affiliations:
+  - Institute of Chemistry, Chinese Academy of Sciences
+links:
+  - icon: envelope
+    url: "mailto:tangyubo@fjirsm.ac.cn"
+  - icon: globe
+    url: "https://www.fjirsm.ac.cn"
+user_groups:
+  - Principal Investigators
+weight: 1

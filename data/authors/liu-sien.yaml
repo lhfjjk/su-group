@@ -1,0 +1,13 @@
+name:
+  display: "刘思恩"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:liusien@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/liu-sien.jpeg"

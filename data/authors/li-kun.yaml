@@ -1,0 +1,12 @@
+name:
+  display: "李坤"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:likun@fjirsm.ac.cn"
+user_groups:
+  - Alumni
+graduation_year: 2020

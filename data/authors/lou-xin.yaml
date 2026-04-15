@@ -1,0 +1,12 @@
+name:
+  display: "娄鑫"
+role: "Faculty"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:louxin@fjirsm.ac.cn"
+user_groups:
+  - Faculty
+graduation_year: 2024

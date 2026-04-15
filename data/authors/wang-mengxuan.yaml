@@ -1,0 +1,13 @@
+name:
+  display: "王梦璇"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:wangmengxuan@fjrism.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/wang-mengxuan.jpg"

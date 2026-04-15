@@ -1,0 +1,13 @@
+name:
+  display: "杨旻昱"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:yangminyu@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+graduation_year: 2022
+avatar: "media/authors/yang-minyu.jpg"
