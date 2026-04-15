@@ -1,26 +1,22 @@
 ---
-title: 'Projects'
-date: 2024-05-19
+title: 'Lab Facilities'
 type: landing
+cms_exclude: false
 
 design:
-  # Section spacing
   spacing: '5rem'
 
-# Page sections
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Laboratory Equipment
+      text: Our lab is equipped with state-of-the-art instruments for organic synthesis research.
       filters:
         folders:
           - projects
     design:
-      view: article-grid
-      fill_image: false
+      view: card
       columns: 3
       show_date: false
-      show_read_time: false
       show_read_more: false
 ---
