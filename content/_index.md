@@ -37,22 +37,22 @@ sections:
   - block: markdown
     content:
       title: 'Recent Publications'
-      text: 'Click below to view our latest research publications.'
-      buttons:
-        - name: 'View All Publications'
-          url: /publications/
+      text: |-
+        Click below to view our latest research publications.
+
+        [**View All Publications →**](/su-group/publications/)
   - block: markdown
     content:
       title: 'Our Team'
-      text: 'Meet our team of researchers and students.'
-      buttons:
-        - name: 'View Team Members'
-          url: /team/
+      text: |-
+        Meet our team of researchers and students.
+
+        [**View Team Members →**](/su-group/team/)
   - block: markdown
     content:
       title: 'Lab Facilities'
-      text: 'Explore our laboratory equipment and facilities.'
-      buttons:
-        - name: 'View Facilities'
-          url: /projects/
+      text: |-
+        Explore our laboratory equipment and facilities.
+
+        [**View Facilities →**](/su-group/projects/)
 ---
