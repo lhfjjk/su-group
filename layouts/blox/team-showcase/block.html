@@ -206,20 +206,22 @@
           <div class="group relative">
             <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
 
-              <a href="{{ $link }}" class="block relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800" aria-label="{{ $profile.title }}">
-                {{ if $avatar }}
-                  {{ $image := $avatar.Fit "800x800 Cover q90" }}
-                  <img src="{{ $image.RelPermalink }}"
-                       alt="{{ $profile.title }}"
-                       width="{{ $image.Width }}"
-                       height="{{ $image.Height }}"
-                       loading="lazy"
-                       class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
-                {{ else }}
-                  <div class="absolute inset-0 bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-4xl font-semibold text-gray-600 dark:text-gray-200">
-                    {{ $initial }}
-                  </div>
-                {{ end }}
+              <a href="{{ $link }}" class="block p-4 bg-gray-50 dark:bg-gray-800" aria-label="{{ $profile.title }}">
+                <div class="relative aspect-square overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-700">
+                  {{ if $avatar }}
+                    {{ $image := $avatar.Fit "800x800 Cover q90" }}
+                    <img src="{{ $image.RelPermalink }}"
+                         alt="{{ $profile.title }}"
+                         width="{{ $image.Width }}"
+                         height="{{ $image.Height }}"
+                         loading="lazy"
+                         class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                  {{ else }}
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-gray-500 dark:text-gray-200">
+                      {{ $initial }}
+                    </div>
+                  {{ end }}
+                </div>
               </a>
 
               <div class="p-6">
@@ -349,20 +351,22 @@
         {{ $initial := cond (gt (len $nameSource) 0) (upper (substr $nameSource 0 1)) "?" }}
         <div class="group relative">
           <div class="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            <a href="{{ $link }}" class="block relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800" aria-label="{{ $profile.title }}">
-              {{ if $avatar }}
-              {{ $image := $avatar.Fit "800x800 Cover q90" }}
-              <img src="{{ $image.RelPermalink }}"
-                   alt="{{ $profile.title }}"
-                   width="{{ $image.Width }}"
-                   height="{{ $image.Height }}"
-                   loading="lazy"
-                   class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
-              {{ else }}
-              <div class="absolute inset-0 bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-4xl font-semibold text-gray-600 dark:text-gray-200">
-                {{ $initial }}
+            <a href="{{ $link }}" class="block p-4 bg-gray-50 dark:bg-gray-800" aria-label="{{ $profile.title }}">
+              <div class="relative aspect-square overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-700">
+                {{ if $avatar }}
+                {{ $image := $avatar.Fit "800x800 Cover q90" }}
+                <img src="{{ $image.RelPermalink }}"
+                     alt="{{ $profile.title }}"
+                     width="{{ $image.Width }}"
+                     height="{{ $image.Height }}"
+                     loading="lazy"
+                     class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                {{ else }}
+                <div class="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-gray-500 dark:text-gray-200">
+                  {{ $initial }}
+                </div>
+                {{ end }}
               </div>
-              {{ end }}
             </a>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
