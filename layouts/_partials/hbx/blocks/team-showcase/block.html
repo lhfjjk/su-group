@@ -209,13 +209,13 @@
               <a href="{{ $link }}" class="block p-4 bg-gray-50 dark:bg-gray-800" aria-label="{{ $profile.title }}">
                 <div class="relative aspect-square overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-700">
                   {{ if $avatar }}
-                    {{ $image := $avatar.Fit "800x800 Cover q90" }}
+                    {{ $image := $avatar.Fit "800x800 Center q90" }}
                     <img src="{{ $image.RelPermalink }}"
                          alt="{{ $profile.title }}"
                          width="{{ $image.Width }}"
                          height="{{ $image.Height }}"
                          loading="lazy"
-                         class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                         class="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-105">
                   {{ else }}
                     <div class="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-gray-500 dark:text-gray-200">
                       {{ $initial }}
@@ -354,13 +354,13 @@
             <a href="{{ $link }}" class="block p-4 bg-gray-50 dark:bg-gray-800" aria-label="{{ $profile.title }}">
               <div class="relative aspect-square overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-700">
                 {{ if $avatar }}
-                {{ $image := $avatar.Fit "800x800 Cover q90" }}
+                {{ $image := $avatar.Fit "800x800 Center q90" }}
                 <img src="{{ $image.RelPermalink }}"
                      alt="{{ $profile.title }}"
                      width="{{ $image.Width }}"
                      height="{{ $image.Height }}"
                      loading="lazy"
-                     class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+                     class="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-105">
                 {{ else }}
                 <div class="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-gray-500 dark:text-gray-200">
                   {{ $initial }}
