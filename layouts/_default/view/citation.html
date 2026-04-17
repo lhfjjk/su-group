@@ -1,0 +1,35 @@
+{{ $item := .item }}
+{{ $year_value := $item.Params.event_start | default $item.Date }}
+{{ $year := (time $year_value).Format "2006" }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $link := $item.RelPermalink }}
+{{ $title := $item.Title }}
+{{ $authors := partial "page_metadata_authors" $item }}
+{{ $publication := "" }}
+{{ if $item.Params.publication_short }}
+  {{ $publication = $item.Params.publication_short | markdownify }}
+{{ else if $item.Params.publication }}
+  {{ $publication = $item.Params.publication | markdownify }}
+{{ end }}
+{{ $reaction_img := "" }}
+{{ if and $item.Params.reaction_img $item.Params.reaction_img.url }}
+  {{ $reaction_img = $item.Params.reaction_img.url }}
+{{ end }}
+
+<div class="paper-entry" style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
+  {{ if $reaction_img }}
+  <div class="paper-reaction" style="flex-shrink: 0;">
+    <img src="{{ $reaction_img }}" alt="reaction" style="width: 80px; height: auto; display: block; margin: 0 auto;" onerror="this.style.display='none'" />
+  </div>
+  {{ end }}
+  <div class="paper-info" style="flex: 1;">
+    <div class="paper-title" style="text-align: left;">
+      {{ if $title }}<a href="{{ $link }}" class="underline">{{ $title }}</a>{{ end }}
+    </div>
+    <div class="paper-body" style="text-align: left;">
+      <span class="article-metadata li-cite-author">{{ $authors | safeHTML }}</span>
+      ({{- $year -}}).
+      {{ if $publication }}{{ $publication }}.{{ end }}
+    </div>
+  </div>
+</div>
