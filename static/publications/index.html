@@ -15,14 +15,6 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 .main{padding:4rem 0}
 .page-title{font-size:1.875rem;font-weight:700;margin-bottom:0.5rem;color:#003ec7}
 .page-sub{margin-bottom:2rem;color:#6b7280;font-size:0.95rem}
-.pub-hero{background:linear-gradient(135deg,#003ec7 0%,#0055cc 50%,#0077dd 100%);border-radius:1rem;padding:2.5rem 2rem;margin-bottom:2.5rem;position:relative;overflow:hidden}
-.pub-hero::before{content:'';position:absolute;top:-50%;right:-10%;width:300px;height:300px;background:rgba(255,255,255,0.05);border-radius:50%}
-.pub-hero::after{content:'';position:absolute;bottom:-30%;left:-5%;width:200px;height:200px;background:rgba(255,255,255,0.04);border-radius:50%}
-.pub-hero-inner{position:relative;z-index:1}
-.pub-hero-title{font-size:2.5rem;font-weight:700;color:#fff;margin-bottom:0.5rem;letter-spacing:-0.02em}
-.pub-hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.8);margin-bottom:0.35rem}
-.pub-hero-count{font-size:0.875rem;color:rgba(255,255,255,0.6)}
-.pub-hero-count a{color:rgba(255,255,255,0.85);text-decoration:underline}
 .year-filters{margin-bottom:2.5rem;display:flex;align-items:center;gap:0.75rem}
 .year-filters label{font-size:0.875rem;font-weight:600;color:#374151}
 .year-select{padding:0.4rem 0.75rem;border-radius:0.5rem;font-size:0.875rem;font-family:inherit;border:1px solid #d1d5db;background:#fff;color:#111827;cursor:pointer;min-width:120px}
@@ -47,16 +39,8 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class='header'><div class='container'><div class='nav'>
 <a href='/su-group/'>Su Group</a>
 <a href='/su-group/team/'>Team</a>
-<a href='/su-group/publications/'>← Back to Publications</a>
 </div></div></div>
 <div class='main'><div class='container'>
-<div class='pub-hero'>
-  <div class='pub-hero-inner'>
-    <h1 class='pub-hero-title'>Published Papers</h1>
-    <p class='pub-hero-sub'>福州大学 &middot; 苏伟平课题组</p>
-    <p class='pub-hero-count'>159 papers collected from <a href='https://www.x-mol.com' target='_blank' rel='noopener'>X-MOL</a></p>
-  </div>
-</div>
 <div class='year-filters' id='filters'>
 <label for='year-select'>Filter by year:</label>
 <select id='year-select' class='year-select' onchange='filterPapers(this)'>
