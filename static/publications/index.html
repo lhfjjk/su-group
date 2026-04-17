@@ -868,8 +868,13 @@
   border: 1px solid #cbd5e1;
   border-radius: 1rem;
   padding: 1.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.paper-entry .paper-reaction img {
+  display: block;
+  margin: 0 auto;
 }
 .paper-entry .paper-info {
   text-align: left !important;
@@ -2555,7 +2560,7 @@
     <div class="page-body " style="max-width:860px;margin:0 auto;padding:0 1rem;">
     
     <div c
-id='filters'>
+id='filters' style="margin-top:1.5rem;">
 <label for='year-select'>Filter by year:</label>
 <select id='year-select' class='year-select' onchange='filterPapers(this)'>
 <option value='all'>All</option>
