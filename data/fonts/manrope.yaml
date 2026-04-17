@@ -1,0 +1,30 @@
+# HugoBlox Font Pack - Custom Manrope
+# Luminous Scholar Design System
+
+hugoblox:
+  meta:
+    format: "hugoblox-font@1"
+    name: "Manrope"
+    vendor: "custom"
+    version: "1.0.0"
+    license: "MIT"
+    description: "Manrope - Geometric yet humanist sans-serif for Luminous Scholar design"
+
+  families:
+    heading: "Manrope"
+    body: "Manrope"
+    code: "JetBrains Mono"
+
+  weights:
+    heading: [400, 500, 600, 700, 800]
+    body: [400, 500, 600]
+    code: [400]
+
+  leading:
+    heading: 1.1
+    body: 1.6
+    code: 1.5
+
+  tracking:
+    heading: "-0.02em"
+    body: "0"
