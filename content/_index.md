@@ -34,13 +34,13 @@ sections:
           icon: 'hexagon'
         - title: 'Visible Light Catalysis'
           text: 'Exploiting photoredox pathways to enable challenging transformations under mild conditions.'
-          icon: 'wb_sunny'
+          icon: 'sun'
         - title: 'Direct C-H Bond Activation'
           text: 'Direct functionalization of inert C-H bonds to streamline molecular synthesis and minimize waste.'
           icon: 'bolt'
         - title: 'Mechanistic Exploration'
           text: 'In-depth kinetic and computational studies to uncover the underlying logic of catalytic cycles.'
-          icon: 'biotech'
+          icon: 'beaker'
   - block: luminous-links
     content:
       title: 'Explore More'
@@ -48,13 +48,13 @@ sections:
         - title: 'Recent Publications'
           text: 'View our latest peer-reviewed research in JACS, Angewandte Chemie, and Nature Communications.'
           url: '/su-group/publications/'
-          icon: article
+          icon: 'document-text'
         - title: 'Our Team'
           text: 'Meet the talented doctoral researchers and postdoctoral fellows driving our innovation.'
           url: '/su-group/team/'
-          icon: groups
+          icon: 'user-group'
         - title: 'Lab Facilities'
           text: 'Explore our state-of-the-art analytical equipment and experimental environment at ICCAS.'
           url: '/su-group/projects/'
-          icon: precision_manufacturing
+          icon: 'wrench-screwdriver'
 ---

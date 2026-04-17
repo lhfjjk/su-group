@@ -45,7 +45,7 @@
 {{ $item_text := "" }}
 {{ with index $item "text" }}{{ $item_text = printf "%v" . }}{{ end }}
 {{ $item_icon := "circle-stack" }}
-{{ with index $item "icon" }}{{ $item_icon = printf "%v" . }}{{ end }}
+{{ with index $item "icon" }}{{ $item_icon = printf "hero/%v" . }}{{ end }}
 
 <div class="luminous-research-card group p-10 rounded-lg transition-all duration-500 relative overflow-hidden cursor-pointer"
      style="background: var(--color-surface-container-lowest, #fff); border-left: 2px solid var(--color-surface-variant, #dfe3e7);">

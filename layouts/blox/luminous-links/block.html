@@ -20,16 +20,16 @@
 {{ with index $item "text" }}{{ $item_text = printf "%v" . }}{{ end }}
 {{ $item_url := "#" }}
 {{ with index $item "url" }}{{ $item_url = printf "%v" . }}{{ end }}
-{{ $item_icon := "article" }}
-{{ with index $item "icon" }}{{ $item_icon = printf "%v" . }}{{ end }}
+{{ $item_icon := "hero/document-text" }}
+{{ with index $item "icon" }}{{ $item_icon = printf "hero/%v" . }}{{ end }}
 
 <a class="group flex flex-col gap-6 p-8 rounded-lg transition-colors" href="{{ $item_url }}" style="background: transparent;">
 <div class="flex items-center justify-between">
 <div>
-{{ partial "functions/get_icon" (dict "name" $item_icon "attributes" "style=\"width:32px;height:32px;color:var(--color-primary,#003ec7);\"" ) }}
+{{ partial "functions/get_icon" (dict "name" $item_icon "attributes" "style=\"width:32px;height:32px;color:var(--color-primary,#003ec7);\"") }}
 </div>
-<div class="text-surface-variant group-hover:text-primary transition-colors">
-{{ partial "functions/get_icon" (dict "name" "arrow-northeast" "attributes" "style=\"width:20px;height:20px;\"" ) }}
+<div class="transition-colors" style="color: var(--color-surface-variant, #dfe3e7);">
+{{ partial "functions/get_icon" (dict "name" "hero/arrow-top-right-on-square" "attributes" "style=\"width:20px;height:20px;\"") }}
 </div>
 </div>
 <div>
