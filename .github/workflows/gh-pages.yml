@@ -49,6 +49,15 @@ jobs:
           hugo 2>&1 | tee hugo_build.log
           echo "---TAIZI-DEBUG-END---"
 
+      - name: Restore static publications page
+        run: |
+          # Copy the hand-crafted publications HTML back into public/ after Hugo build
+          # This overrides the Hugo-generated publications page with our custom one
+          if [ -f static/publications/index.html ]; then
+            cp static/publications/index.html public/publications/index.html
+            echo "Static publications page restored ($(wc -c < static/publications/index.html) bytes)"
+          fi
+
       - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v4
