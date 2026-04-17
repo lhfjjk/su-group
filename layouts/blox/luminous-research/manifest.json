@@ -1,0 +1,11 @@
+{
+  "id": "luminous-research",
+  "name": "Luminous Research Areas",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["research", "luminous", "cards"],
+  "description": "4-column research cards matching Luminous Scholar design",
+  "author": "Su Group",
+  "homepage": "https://lhfjjk.github.io/su-group/"
+}

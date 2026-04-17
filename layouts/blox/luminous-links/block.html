@@ -1,0 +1,35 @@
+{{/* Hugo Blox: Luminous Navigation Links - 3列导航卡片 */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $design := $block.design }}
+{{ if not (reflect.IsMap $design) }}{{ $design = dict }}{{ end }}
+
+{{ $title := "" }}
+{{ with index $content "title" }}{{ $title = printf "%v" . | emojify | $page.RenderString }}{{ end }}
+
+<section class="py-24 px-6 md:px-12 border-t border-surface-variant/30" style="border-top: 1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent);">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+{{ range $item := (index $content "items") }}
+{{ $item_title := printf "%v" (index $item "title") | default "" }}
+{{ $item_text := printf "%v" (index $item "text") | default "" }}
+{{ $item_url := printf "%v" (index $item "url") | default "#" }}
+{{ $item_icon := printf "%v" (index $item "icon") | default "article" }}
+
+<a class="group flex flex-col gap-6 p-8 rounded-lg hover:bg-surface-container-high transition-colors" href="{{ $item_url }}" style="background: transparent;">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">{{ $item_icon }}</span>
+<span class="material-symbols-outlined text-surface-variant group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">north_east</span>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2 text-on-surface" style="font-family: 'Manrope', sans-serif;">{{ $item_title }}</h4>
+<p class="text-sm text-on-surface-variant">{{ $item_text }}</p>
+</div>
+</a>
+{{ end }}
+</div>
+</div>
+</section>

@@ -1,0 +1,11 @@
+{
+  "id": "luminous-hero",
+  "name": "Luminous Hero",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["hero", "luminous", "custom"],
+  "description": "Custom hero block for Luminous Scholar design - asymmetric layout with floating metadata card",
+  "author": "Su Group",
+  "homepage": "https://lhfjjk.github.io/su-group/"
+}

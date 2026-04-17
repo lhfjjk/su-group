@@ -1,0 +1,11 @@
+{
+  "id": "luminous-links",
+  "name": "Luminous Navigation Links",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["navigation", "luminous", "links"],
+  "description": "3-column navigation cards matching Luminous Scholar design",
+  "author": "Su Group",
+  "homepage": "https://lhfjjk.github.io/su-group/"
+}

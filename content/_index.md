@@ -8,51 +8,55 @@ design:
   spacing: '6rem'
 
 sections:
-  - block: resume-biography-3
+  - block: luminous-hero
     content:
       username: su-weiping
       text: ''
-      headings:
-        about: 'About Our Group'
-        education: ''
-        interests: ''
-    design:
-      background:
-        gradient_mesh:
-          enable: true
-      name:
-        size: lg
-      avatar:
-        size: large
-        shape: circle
+      button:
+        text: ''
+        url: ''
   - block: markdown
     content:
-      title: 'Research Areas'
+      title: 'Pioneering Dehydrogenative Coupling & Photocatalysis'
       text: |-
-        Our group is dedicated to developing novel synthetic methods in organic chemistry, with particular emphasis on:
-        - Transition metal-catalyzed C-H functionalization
-        - Photocatalytic synthesis
-        - Dehydrogenative coupling reactions
-        - Sustainable and green chemistry approaches
-  - block: markdown
+        Our laboratory focuses on developing sustainable and efficient chemical methodologies. By harnessing the power of visible light and transition-metal catalysts, we aim to transform how complex molecules are constructed, reducing environmental impact while increasing molecular complexity.
+      subtitle: 'Core scientific domains currently under investigation by our multidisciplinary team of scholars.'
+      tags:
+        - Catalysis
+        - Synthetic Organic Chemistry
+        - C-H Functionalization
+        - Green Chemistry
+        - Ligand Design
+  - block: luminous-research
     content:
-      title: 'Recent Publications'
-      text: |-
-        Click below to view our latest research publications.
-
-        [**View All Publications →**](/su-group/publications/)
-  - block: markdown
+      title: 'Research Focus'
+      subtitle: 'Core scientific domains currently under investigation by our multidisciplinary team of scholars.'
+      items:
+        - title: 'Heterocyclic Synthesis'
+          text: 'Innovative pathways for the construction of biologically relevant heterocyclic frameworks.'
+          icon: 'hexagon'
+        - title: 'Visible Light Catalysis'
+          text: 'Exploiting photoredox pathways to enable challenging transformations under mild conditions.'
+          icon: 'wb_sunny'
+        - title: 'Direct C-H Bond Activation'
+          text: 'Direct functionalization of inert C-H bonds to streamline molecular synthesis and minimize waste.'
+          icon: 'bolt'
+        - title: 'Mechanistic Exploration'
+          text: 'In-depth kinetic and computational studies to uncover the underlying logic of catalytic cycles.'
+          icon: 'biotech'
+  - block: luminous-links
     content:
-      title: 'Our Team'
-      text: |-
-        Meet our team of researchers and students.
-
-        [**View Team Members →**](/su-group/team/)
-  - block: markdown
-    content:
-      title: 'Lab Facilities'
-      text: |-
-        Explore our laboratory equipment and facilities.
-
-        [**View Facilities →**](/su-group/projects/)
----
+      title: 'Explore More'
+      items:
+        - title: 'Recent Publications'
+          text: 'View our latest peer-reviewed research in JACS, Angewandte Chemie, and Nature Communications.'
+          url: '/su-group/publications/'
+          icon: 'article'
+        - title: 'Our Team'
+          text: 'Meet the talented doctoral researchers and postdoctoral fellows driving our innovation.'
+          url: '/su-group/team/'
+          icon: 'groups'
+        - title: 'Lab Facilities'
+          text: 'Explore our state-of-the-art analytical equipment and experimental environment at ICCAS.'
+          url: '/su-group/projects/'
+          icon: 'precision_manufacturing'
