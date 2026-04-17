@@ -20,8 +20,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 .year-select{padding:0.4rem 0.75rem;border-radius:0.5rem;font-size:0.875rem;font-family:inherit;border:1px solid #d1d5db;background:#fff;color:#111827;cursor:pointer;min-width:120px}
 .year-select:focus{outline:none;border-color:#003ec7;box-shadow:0 0 0 2px rgba(0,62,199,0.15)}
 .paper-entry{background:#fff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;margin-bottom:1.25rem}
-.paper-row{display:flex;gap:1.25rem;align-items:flex-start}
-@media(max-width:768px){.paper-row{flex-direction:column}}
+.paper-row{display:flex;flex-direction:column;gap:0.75rem}
 .paper-info{flex:1;min-width:0}
 .paper-title{font-size:1rem;font-weight:600;margin-bottom:0.4rem;color:#111827;line-height:1.5}
 .paper-title a{color:#111827;text-decoration:none}
@@ -30,10 +29,10 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 .su-name{color:#003ec7;font-weight:600}
 .paper-meta{font-size:0.8rem;color:#6b7280}
 .paper-meta .journal{font-style:italic}
-.paper-reaction{flex-shrink:0;width:160px}
-.paper-reaction img{max-height:160px;border-radius:0.5rem;border:1px solid #e5e7eb;cursor:pointer;transition:box-shadow 0.2s}
+.paper-reaction{width:100%;text-align:center}
+.paper-reaction img{max-height:180px;border-radius:0.5rem;border:1px solid #e5e7eb;cursor:pointer;transition:box-shadow 0.2s}
 .paper-reaction img:hover{box-shadow:0 4px 12px rgba(0,0,0,0.15)}
-@media(max-width:768px){.paper-reaction{width:100%}.paper-reaction img{max-height:120px}}
+.paper-reaction a{display:inline-block}
 </style>
 </head><body>
 <div class='header'><div class='container'><div class='nav'>
