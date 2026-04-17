@@ -1,0 +1,11 @@
+{{/* layouts/page/single.html — override page rendering for publications */}}
+{{ define "main" }}
+{{ $content := .Content }}
+{{ $safe := $content | replaceRE "<!--.*?-->" "" | strings.TrimLeft "<" }}
+{{ $safe2 := $safe | replaceRE "^<p>" "" | replaceRE "</p>$" "" }}
+<section class="py-16" style="background:var(--color-surface,#f6fafe);">
+  <div class="max-w-7xl mx-auto px-5 md:px-12" id="pub-content">
+    {{ $content }}
+  </div>
+</section>
+{{ end }}
