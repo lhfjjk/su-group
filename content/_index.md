@@ -12,9 +12,6 @@ sections:
     content:
       username: su-weiping
       text: ''
-      button:
-        text: ''
-        url: ''
   - block: markdown
     content:
       title: 'Pioneering Dehydrogenative Coupling & Photocatalysis'
@@ -51,12 +48,13 @@ sections:
         - title: 'Recent Publications'
           text: 'View our latest peer-reviewed research in JACS, Angewandte Chemie, and Nature Communications.'
           url: '/su-group/publications/'
-          icon: 'article'
+          icon: article
         - title: 'Our Team'
           text: 'Meet the talented doctoral researchers and postdoctoral fellows driving our innovation.'
           url: '/su-group/team/'
-          icon: 'groups'
+          icon: groups
         - title: 'Lab Facilities'
           text: 'Explore our state-of-the-art analytical equipment and experimental environment at ICCAS.'
           url: '/su-group/projects/'
-          icon: 'precision_manufacturing'
+          icon: precision_manufacturing
+---

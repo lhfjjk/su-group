@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Our Team | </title>
-    <link>https://lhfjjk.github.io/su-group/team/</link>
-      <atom:link href="https://lhfjjk.github.io/su-group/team/index.xml" rel="self" type="application/rss+xml" />
-    <description>Our Team</description>
-    <generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language>
-    <image>
-      <url>https://lhfjjk.github.io/su-group/media/icon_hu_da05098ef60dc2e7.png</url>
-      <title>Our Team</title>
-      <link>https://lhfjjk.github.io/su-group/team/</link>
-    </image>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Our Team |</title><link>https://lhfjjk.github.io/su-group/team/</link><atom:link href="https://lhfjjk.github.io/su-group/team/index.xml" rel="self" type="application/rss+xml"/><description>Our Team</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><image><url>https://lhfjjk.github.io/su-group/media/icon_hu_da05098ef60dc2e7.png</url><title>Our Team</title><link>https://lhfjjk.github.io/su-group/team/</link></image></channel></rss>
