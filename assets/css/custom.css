@@ -438,3 +438,69 @@ select[data-theme-picker] {
   box-shadow: 0 1px 2px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8) !important;
   border-radius: 6px !important;
 }
+
+
+/* ===== Publications page: restructure pub-list-item to match paper-entry style ===== */
+.pub-list-item {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  padding: 0.75rem !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
+}
+
+.pub-icon {
+  display: none !important;  /* hide the file icon, we don't need it */
+}
+
+.article-metadata {
+  display: block !important;
+  text-align: left !important;
+  font-size: 0.875rem !important;
+  color: #555 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.pub-list-item a.underline {
+  display: block !important;
+  text-align: left !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  color: #1a56db !important;
+  text-decoration: none !important;
+  margin-bottom: 0.25rem !important;
+  line-height: 1.4 !important;
+}
+
+.pub-list-item {
+  color: #374151 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Remove max-width constraint that Hugo Blox imposes */
+.page-body .flex.flex-col.items-center {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+/* Style the year filter select */
+#year-filter {
+  display: block !important;
+  width: 220px !important;
+  margin: 0 auto 2rem auto !important;
+  text-align: center !important;
+  padding: 0.4rem 0.75rem !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  background: white !important;
+}
+
+/* ===== End publications override ===== */
