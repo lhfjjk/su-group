@@ -403,23 +403,48 @@ a:hover, button:hover {
 /* ─────────────────────────────────────────
    HEADER: Remove blue backgrounds from search/theme toggle buttons
    ───────────────────────────────────────── */
+/* ─────────────────────────────────────────
+   HEADER BUTTONS: Embossed/raised style for search, theme, theme-picker
+   ───────────────────────────────────────── */
 button[data-search-toggle],
 button.theme-toggle,
-[aria-label="toggle search"] {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+.header .px-3.text-\[var\(--hb-color-header-fg\)\],
+[data-theme-pack],
+select[name="theme"],
+select[onchange*="theme"] {
+  background: var(--hb-color-background, #ffffff) !important;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+  border-bottom-color: rgba(0,0,0,0.20) !important;
+  border-right-color: rgba(0,0,0,0.16) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  border-radius: 6px !important;
+  transition: all 0.15s ease !important;
 }
 
-/* Ensure search/theme buttons inherit header text color */
-button[data-search-toggle],
-button.theme-toggle {
-  color: var(--hb-color-header-fg, #0f172a) !important;
-}
-
-/* Hover states for header buttons */
 button[data-search-toggle]:hover,
 button.theme-toggle:hover {
-  color: var(--color-primary-500, #003ec7) !important;
-  background: transparent !important;
+  background: var(--hb-color-background, #ffffff) !important;
+  border-color: rgba(0,0,0,0.18) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  transform: translateY(-1px) !important;
+}
+
+button[data-search-toggle]:active,
+button.theme-toggle:active {
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.10) !important;
+  transform: translateY(0) !important;
+  border-bottom-color: rgba(0,0,0,0.10) !important;
+}
+
+/* Theme picker dropdown - raised look */
+select[onchange*="theme"],
+select[data-theme-picker] {
+  color: var(--hb-color-header-fg, #0f172a) !important;
+  font-family: var(--hb-font-nav, 'Manrope', sans-serif) !important;
+  padding: 3px 6px !important;
+  background: var(--hb-color-background, #ffffff) !important;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+  border-bottom-color: rgba(0,0,0,0.20) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8) !important;
+  border-radius: 6px !important;
 }
