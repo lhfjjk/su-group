@@ -399,3 +399,27 @@ a:hover, button:hover {
   background: var(--color-surface-container-low, #f0f4f8);
   padding: 8rem 1.5rem;
 }
+
+/* ─────────────────────────────────────────
+   HEADER: Remove blue backgrounds from search/theme toggle buttons
+   ───────────────────────────────────────── */
+button[data-search-toggle],
+button.theme-toggle,
+[aria-label="toggle search"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure search/theme buttons inherit header text color */
+button[data-search-toggle],
+button.theme-toggle {
+  color: var(--hb-color-header-fg, #0f172a) !important;
+}
+
+/* Hover states for header buttons */
+button[data-search-toggle]:hover,
+button.theme-toggle:hover {
+  color: var(--color-primary-500, #003ec7) !important;
+  background: transparent !important;
+}
