@@ -32,7 +32,6 @@ cms_exclude: false
 <div class="papers-inner">
 <h1 class="papers-title">📚 Published Papers</h1>
 <p class="papers-sub">Su Group &mdash; Fuzhou University &mdash; 159 publications</p>
-
 <div class="year-filters">
 <button class="year-btn active" data-year="all" onclick="filterPapers(this)">All</button>
 <button class="year-btn" data-year="2026" onclick="filterPapers(this)">2026</button>
@@ -60,7 +59,6 @@ cms_exclude: false
 <button class="year-btn" data-year="1998" onclick="filterPapers(this)">1998</button>
 <button class="year-btn" data-year="1997" onclick="filterPapers(this)">1997</button>
 </div>
-
 <div id="papers-list">
 <div class="paper-entry" data-year="2026">
 <div class="paper-row">
