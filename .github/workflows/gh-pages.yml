@@ -45,7 +45,16 @@ jobs:
       - name: Build
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
-        run: hugo
+        run: |
+          hugo 2>&1 | tee hugo_build.log
+          echo "---TAIZI-DEBUG-END---"
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugo-build-log
+          path: hugo_build.log
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
