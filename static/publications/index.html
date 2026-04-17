@@ -15,9 +15,10 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 .main{padding:4rem 0}
 .page-title{font-size:1.875rem;font-weight:700;margin-bottom:0.5rem;color:#003ec7}
 .page-sub{margin-bottom:2rem;color:#6b7280;font-size:0.95rem}
-.year-filters{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem}
-.year-btn{padding:0.4rem 1rem;border-radius:9999px;font-size:0.875rem;font-weight:500;cursor:pointer;border:1px solid #d1d5db;background:#fff;color:#374151;transition:all 0.15s}
-.year-btn.active,.year-btn:hover{background:#003ec7;color:#fff;border-color:#003ec7}
+.year-filters{margin-bottom:2.5rem;display:flex;align-items:center;gap:0.75rem}
+.year-filters label{font-size:0.875rem;font-weight:600;color:#374151}
+.year-select{padding:0.4rem 0.75rem;border-radius:0.5rem;font-size:0.875rem;font-family:inherit;border:1px solid #d1d5db;background:#fff;color:#111827;cursor:pointer;min-width:120px}
+.year-select:focus{outline:none;border-color:#003ec7;box-shadow:0 0 0 2px rgba(0,62,199,0.15)}
 .paper-entry{background:#fff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;margin-bottom:1.25rem}
 .paper-row{display:flex;gap:1.25rem;align-items:flex-start}
 @media(max-width:768px){.paper-row{flex-direction:column}}
@@ -44,31 +45,34 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <h1 class='page-title'>Published Papers</h1>
 <p class='page-sub'>159 papers &middot; Source: <a href='https://www.x-mol.com' style='color:#003ec7;'>X-MOL</a> &middot;福州大学 苏伟平课题组</p>
 <div class='year-filters' id='filters'>
-<button class='year-btn active' data-year='all' onclick='filterPapers(this)'>All</button>
-<button class='year-btn' data-year='2026' onclick='filterPapers(this)'>2026</button>
-<button class='year-btn' data-year='2025' onclick='filterPapers(this)'>2025</button>
-<button class='year-btn' data-year='2024' onclick='filterPapers(this)'>2024</button>
-<button class='year-btn' data-year='2023' onclick='filterPapers(this)'>2023</button>
-<button class='year-btn' data-year='2022' onclick='filterPapers(this)'>2022</button>
-<button class='year-btn' data-year='2021' onclick='filterPapers(this)'>2021</button>
-<button class='year-btn' data-year='2020' onclick='filterPapers(this)'>2020</button>
-<button class='year-btn' data-year='2019' onclick='filterPapers(this)'>2019</button>
-<button class='year-btn' data-year='2018' onclick='filterPapers(this)'>2018</button>
-<button class='year-btn' data-year='2017' onclick='filterPapers(this)'>2017</button>
-<button class='year-btn' data-year='2016' onclick='filterPapers(this)'>2016</button>
-<button class='year-btn' data-year='2015' onclick='filterPapers(this)'>2015</button>
-<button class='year-btn' data-year='2014' onclick='filterPapers(this)'>2014</button>
-<button class='year-btn' data-year='2013' onclick='filterPapers(this)'>2013</button>
-<button class='year-btn' data-year='2012' onclick='filterPapers(this)'>2012</button>
-<button class='year-btn' data-year='2011' onclick='filterPapers(this)'>2011</button>
-<button class='year-btn' data-year='2010' onclick='filterPapers(this)'>2010</button>
-<button class='year-btn' data-year='2009' onclick='filterPapers(this)'>2009</button>
-<button class='year-btn' data-year='2007' onclick='filterPapers(this)'>2007</button>
-<button class='year-btn' data-year='2001' onclick='filterPapers(this)'>2001</button>
-<button class='year-btn' data-year='2000' onclick='filterPapers(this)'>2000</button>
-<button class='year-btn' data-year='1999' onclick='filterPapers(this)'>1999</button>
-<button class='year-btn' data-year='1998' onclick='filterPapers(this)'>1998</button>
-<button class='year-btn' data-year='1997' onclick='filterPapers(this)'>1997</button>
+<label for='year-select'>Filter by year:</label>
+<select id='year-select' class='year-select' onchange='filterPapers(this)'>
+<option value='all'>All</option>
+<option value='2026'>2026</option>
+<option value='2025'>2025</option>
+<option value='2024'>2024</option>
+<option value='2023'>2023</option>
+<option value='2022'>2022</option>
+<option value='2021'>2021</option>
+<option value='2020'>2020</option>
+<option value='2019'>2019</option>
+<option value='2018'>2018</option>
+<option value='2017'>2017</option>
+<option value='2016'>2016</option>
+<option value='2015'>2015</option>
+<option value='2014'>2014</option>
+<option value='2013'>2013</option>
+<option value='2012'>2012</option>
+<option value='2011'>2011</option>
+<option value='2010'>2010</option>
+<option value='2009'>2009</option>
+<option value='2007'>2007</option>
+<option value='2001'>2001</option>
+<option value='2000'>2000</option>
+<option value='1999'>1999</option>
+<option value='1998'>1998</option>
+<option value='1997'>1997</option>
+</select>
 </div>
 <div id='papers'>
 <div class="paper-entry" data-year="2026">
@@ -78,7 +82,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jiale Zhang, Siqing Liu, Denghui Ma, Yu Du, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2026</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.6c00996" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.6c00996</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260407%2F1775527815690.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260407%2F1775527815690.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260407%2F1775527815690.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260407%2F1775527815690.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2026">
@@ -88,7 +92,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yangjing Xu, Denghui Ma, Haoran Huang, Zihen Liu, Jianchen Zhang, Fanyuanhang Yang, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2026</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.6c00053" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.6c00053</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260302%2F1772385679246.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260302%2F1772385679246.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260302%2F1772385679246.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260302%2F1772385679246.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2026">
@@ -98,7 +102,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Chang Yin, Hongyi Li, Yanjing Liao, Sien Liu, Hua Tu, Ping Lin, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Journal of the American Chemical Society</span> &mdash; <strong>2026</strong> &mdash; DOI: <a href="https://doi.org/10.1021/jacs.5c19699" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/jacs.5c19699</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260219%2F1771469624998.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260219%2F1771469624998.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260219%2F1771469624998.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260219%2F1771469624998.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2026">
@@ -108,7 +112,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Mengqi Wang, Zhonghui Wu, Xiaoming Jie, Xiaofeng Zhang, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2026</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202524475" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202524475</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260107%2F1767741298428.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260107%2F1767741298428.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20260107%2F1767741298428.jpg" target="_blank"><img src="https://xpic.x-mol.com/20260107%2F1767741298428.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -118,7 +122,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jianchen Zhang, Xiangwen Xu, Denghui Ma, Ge Liu, Fanyuanhang Yang, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.5c04351" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.5c04351</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20251211%2F1765461725924.jpg" target="_blank"><img src="https://xpic.x-mol.com/20251211%2F1765461725924.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20251211%2F1765461725924.jpg" target="_blank"><img src="https://xpic.x-mol.com/20251211%2F1765461725924.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -128,7 +132,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ge Liu, Denghui Ma, Fanyuanhang Yang, Wanhui Huang, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202512332" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202512332</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250926%2F10.1002_anie.202512332.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250926%2F10.1002_anie.202512332.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250926%2F10.1002_anie.202512332.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250926%2F10.1002_anie.202512332.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -138,7 +142,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaofeng Zhang, Xiaoming Jie, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.5c02318" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.5c02318</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250803%2F10.1021_acs.orglett.5c02318.gif" target="_blank"><img src="https://xpic.x-mol.com/20250803%2F10.1021_acs.orglett.5c02318.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250803%2F10.1021_acs.orglett.5c02318.gif" target="_blank"><img src="https://xpic.x-mol.com/20250803%2F10.1021_acs.orglett.5c02318.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -148,7 +152,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Pingping Liang, Xiaoliang Zhu, Lujie Shen, Yuxuan Liu, Tianming Liu, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Advanced Synthesis</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1002/adsc.70019" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/adsc.70019</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250919%2F10.1002_adsc.70019.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250919%2F10.1002_adsc.70019.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250919%2F10.1002_adsc.70019.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250919%2F10.1002_adsc.70019.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -158,7 +162,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xin Lou, Xiaofeng Zhang, Shijun Huang, Xi Deng, Xiaoming Jie, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202505591" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202505591</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250503%2F10.1002_anie.202505591.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250503%2F10.1002_anie.202505591.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250503%2F10.1002_anie.202505591.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250503%2F10.1002_anie.202505591.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -168,7 +172,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jiali Wang, Runze Luan, Tianming Liu, Siqing Liu, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Communications</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d5cc00821b" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d5cc00821b</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250408%2F10.1039_D5CC00821B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250408%2F10.1039_D5CC00821B.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250408%2F10.1039_D5CC00821B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250408%2F10.1039_D5CC00821B.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -178,7 +182,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Biping Xu, Xiaojie Liu, Lei Deng, Yaping Shang, Xiaoming Jie, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Green Chemistry</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d5gc00115c" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d5gc00115c</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250408%2F10.1039_D5GC00115C.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250408%2F10.1039_D5GC00115C.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250408%2F10.1039_D5GC00115C.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250408%2F10.1039_D5GC00115C.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -188,7 +192,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Shuping Wang, Yaping Shang, Mengqi Wang, Jiawen Lai, Xiaoming Jie, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202501806" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202501806</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250526%2F10.1002_anie.202501806.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250526%2F10.1002_anie.202501806.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250526%2F10.1002_anie.202501806.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250526%2F10.1002_anie.202501806.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -198,7 +202,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Wanhui Huang, Ge Liu, Fangyuanhang Yang, Yuxi Ren, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Green Chemistry</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d5gc00057b" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d5gc00057b</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250320%2F10.1039_D5GC00057B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250320%2F10.1039_D5GC00057B.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250320%2F10.1039_D5GC00057B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250320%2F10.1039_D5GC00057B.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -208,7 +212,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Tianming Liu, Xi Deng, Yue Gao, Haofan Li, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202420443" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202420443</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250417%2F10.1002_anie.202420443.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250417%2F10.1002_anie.202420443.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20250417%2F10.1002_anie.202420443.jpg" target="_blank"><img src="https://xpic.x-mol.com/20250417%2F10.1002_anie.202420443.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2025">
@@ -218,7 +222,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaoyu Lin, Haoran Huang, Fanyuanhang Yang, Yuxi Ren, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Chemistry Frontiers</span> &mdash; <strong>2025</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d4qo01785d" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d4qo01785d</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241206%2F10.1039_D4QO01785D.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241206%2F10.1039_D4QO01785D.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241206%2F10.1039_D4QO01785D.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241206%2F10.1039_D4QO01785D.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -228,7 +232,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Haoran Huang, Xiaoyu Lin, Fanyuanhang Yang, Yuxi Ren, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.4c04294" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.4c04294</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241228%2F10.1021_acs.orglett.4c04294.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241228%2F10.1021_acs.orglett.4c04294.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241228%2F10.1021_acs.orglett.4c04294.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241228%2F10.1021_acs.orglett.4c04294.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -238,7 +242,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Hua Tu, Xi Deng, Hongyi Li, Yangjing Xu, Jing Chen, Xiaofeng Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">ACS Catalysis</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acscatal.4c04805" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acscatal.4c04805</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241207%2F10.1021_acscatal.4c04805.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241207%2F10.1021_acscatal.4c04805.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241207%2F10.1021_acscatal.4c04805.jpg" target="_blank"><img src="https://xpic.x-mol.com/20241207%2F10.1021_acscatal.4c04805.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -248,7 +252,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ge Liu, Denghui Ma, Jianchen Zhang, Fanyuanhang Yang, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Nature Communications</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1038/s41467-024-54239-5" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1038/s41467-024-54239-5</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241124%2F10.1038_s41467-024-54239-5.PNG" target="_blank"><img src="https://xpic.x-mol.com/20241124%2F10.1038_s41467-024-54239-5.PNG" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20241124%2F10.1038_s41467-024-54239-5.PNG" target="_blank"><img src="https://xpic.x-mol.com/20241124%2F10.1038_s41467-024-54239-5.PNG" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -258,7 +262,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jiawen Lai, Xuan Xiao, Shixing Shao, Shuping Wang, Jian Kan, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.202401669" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.202401669</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240906%2F10.1002_chem.202401669.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240906%2F10.1002_chem.202401669.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240906%2F10.1002_chem.202401669.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240906%2F10.1002_chem.202401669.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -268,7 +272,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaoliang Zhu, Min Zhang, Lujie Shen, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">The Journal of Organic Chemistry</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.joc.4c00702" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.joc.4c00702</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240630%2F10.1021_acs.joc.4c00702.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240630%2F10.1021_acs.joc.4c00702.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240630%2F10.1021_acs.joc.4c00702.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240630%2F10.1021_acs.joc.4c00702.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -278,7 +282,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Haofan Li, Zhiliang Chen, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Asian Journal of Organic Chemistry</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1002/ajoc.202400118" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/ajoc.202400118</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240818%2F10.1002_ajoc.202400118.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240818%2F10.1002_ajoc.202400118.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240818%2F10.1002_ajoc.202400118.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240818%2F10.1002_ajoc.202400118.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -298,7 +302,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Sien Liu, Yanjing Liao, Hongyi Li, Biping Xu, Xiaofeng Zhang, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Chemistry Frontiers</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d3qo02045b" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d3qo02045b</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240308%2F10.1039_D3QO02045B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240308%2F10.1039_D3QO02045B.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240308%2F10.1039_D3QO02045B.jpg" target="_blank"><img src="https://xpic.x-mol.com/20240308%2F10.1039_D3QO02045B.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2024">
@@ -308,7 +312,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Runze Luan, Ping Lin, Kun Li, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Nature Communications</span> &mdash; <strong>2024</strong> &mdash; DOI: <a href="https://doi.org/10.1038/s41467-024-46051-y" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1038/s41467-024-46051-y</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240227%2F10.1038_s41467-024-46051-y.PNG" target="_blank"><img src="https://xpic.x-mol.com/20240227%2F10.1038_s41467-024-46051-y.PNG" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20240227%2F10.1038_s41467-024-46051-y.PNG" target="_blank"><img src="https://xpic.x-mol.com/20240227%2F10.1038_s41467-024-46051-y.PNG" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2023">
@@ -318,7 +322,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Fanyuanhang Yang, Ping Lin, Biping Xu, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2023</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.3c03354" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.3c03354</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20231125%2F10.1021_acs.orglett.3c03354.jpg" target="_blank"><img src="https://xpic.x-mol.com/20231125%2F10.1021_acs.orglett.3c03354.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20231125%2F10.1021_acs.orglett.3c03354.jpg" target="_blank"><img src="https://xpic.x-mol.com/20231125%2F10.1021_acs.orglett.3c03354.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2023">
@@ -328,7 +332,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yuzhen Gao, Siqing Liu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Green Chemistry</span> &mdash; <strong>2023</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d3gc02326e" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d3gc02326e</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230823%2F10.1039_D3GC02326E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230823%2F10.1039_D3GC02326E.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230823%2F10.1039_D3GC02326E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230823%2F10.1039_D3GC02326E.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2023">
@@ -338,7 +342,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Zhiliang Chen, Hongyi Li, Yanjing Liao, Mengqi Wang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Communications</span> &mdash; <strong>2023</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d3cc01960h" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d3cc01960h</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230516%2F10.1039_D3CC01960H.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230516%2F10.1039_D3CC01960H.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230516%2F10.1039_D3CC01960H.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230516%2F10.1039_D3CC01960H.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2023">
@@ -348,7 +352,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiangwen Xu, Fanyuanhang Yang, Xiaofeng Zhang, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Asian Journal of Organic Chemistry</span> &mdash; <strong>2023</strong> &mdash; DOI: <a href="https://doi.org/10.1002/ajoc.202300069" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/ajoc.202300069</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230521%2F10.1002_ajoc.202300069.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230521%2F10.1002_ajoc.202300069.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230521%2F10.1002_ajoc.202300069.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230521%2F10.1002_ajoc.202300069.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2023">
@@ -358,7 +362,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Chang Yin, Yanjing Liao, Bangyue He, Hongyi Li, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2023</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.202300184" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.202300184</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230524%2F10.1002_chem.202300184.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230524%2F10.1002_chem.202300184.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230524%2F10.1002_chem.202300184.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230524%2F10.1002_chem.202300184.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -368,7 +372,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Hongyi Li, Chang Yin, Sien Liu, Hua Tu, Ping Lin, Jing Chen, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Science</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d2sc05370e" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d2sc05370e</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20221115%2F10.1039_D2SC05370E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20221115%2F10.1039_D2SC05370E.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20221115%2F10.1039_D2SC05370E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20221115%2F10.1039_D2SC05370E.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -378,7 +382,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yigao Tao, Rong Hu, Xiaoming Jie, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">ACS Catalysis</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acscatal.2c04099" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acscatal.2c04099</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20221022%2F10.1021_acscatal.2c04099.jpg" target="_blank"><img src="https://xpic.x-mol.com/20221022%2F10.1021_acscatal.2c04099.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20221022%2F10.1021_acscatal.2c04099.jpg" target="_blank"><img src="https://xpic.x-mol.com/20221022%2F10.1021_acscatal.2c04099.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -388,7 +392,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ge Liu, Yuzhen Gao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">The Journal of Organic Chemistry</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.joc.2c01751" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.joc.2c01751</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230521%2F10.1021_acs.joc.2c01751.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230521%2F10.1021_acs.joc.2c01751.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20230521%2F10.1021_acs.joc.2c01751.jpg" target="_blank"><img src="https://xpic.x-mol.com/20230521%2F10.1021_acs.joc.2c01751.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -398,7 +402,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaojie Liu, Biping Xu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">ACS Catalysis</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acscatal.2c02708" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acscatal.2c02708</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220806%2F10.1021_acscatal.2c02708.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220806%2F10.1021_acscatal.2c02708.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220806%2F10.1021_acscatal.2c02708.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220806%2F10.1021_acscatal.2c02708.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -408,7 +412,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Min Zhang, Jing Chen, Shijun Huang, Biping Xu, Jin Lin, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chem Catalysis</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1016/j.checat.2022.05.018" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1016/j.checat.2022.05.018</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220722%2F10.1016_j.checat.2022.05.018.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220722%2F10.1016_j.checat.2022.05.018.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220722%2F10.1016_j.checat.2022.05.018.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220722%2F10.1016_j.checat.2022.05.018.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -418,7 +422,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Biping Xu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202203365" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202203365</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220720%2F10.1002_anie.202203365.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220720%2F10.1002_anie.202203365.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220720%2F10.1002_anie.202203365.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220720%2F10.1002_anie.202203365.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -438,7 +442,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yongliang Huang, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Chemistry Frontiers</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d2qo00478j" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d2qo00478j</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220511%2F10.1039_D2QO00478J.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220511%2F10.1039_D2QO00478J.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220511%2F10.1039_D2QO00478J.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220511%2F10.1039_D2QO00478J.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -448,7 +452,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Hui Shen, Yu Du, Jian Kan, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d2ob00480a" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d2ob00480a</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220415%2F10.1039_D2OB00480A.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220415%2F10.1039_D2OB00480A.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220415%2F10.1039_D2OB00480A.jpg" target="_blank"><img src="https://xpic.x-mol.com/20220415%2F10.1039_D2OB00480A.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2022">
@@ -458,7 +462,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yigao Tao, Rong Hu, Zeyu Xie, Ping Lin, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">The Journal of Organic Chemistry</span> &mdash; <strong>2022</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.joc.2c00026" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.joc.2c00026</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220402%2F10.1021_acs.joc.2c00026.gif" target="_blank"><img src="https://xpic.x-mol.com/20220402%2F10.1021_acs.joc.2c00026.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20220402%2F10.1021_acs.joc.2c00026.gif" target="_blank"><img src="https://xpic.x-mol.com/20220402%2F10.1021_acs.joc.2c00026.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -488,7 +492,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Sien Liu, Bangyue He, Hongyi Li, Xiaofeng Zhang, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.202102734" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.202102734</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20211112%2F10.1002_chem.202102734.jpg" target="_blank"><img src="https://xpic.x-mol.com/20211112%2F10.1002_chem.202102734.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20211112%2F10.1002_chem.202102734.jpg" target="_blank"><img src="https://xpic.x-mol.com/20211112%2F10.1002_chem.202102734.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -508,7 +512,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xi Deng, Jiandong Guo, Xiaofeng Zhang, Xiaotai Wang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202106356" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202106356</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20211030%2F10.1002_anie.202106356.jpg" target="_blank"><img src="https://xpic.x-mol.com/20211030%2F10.1002_anie.202106356.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20211030%2F10.1002_anie.202106356.jpg" target="_blank"><img src="https://xpic.x-mol.com/20211030%2F10.1002_anie.202106356.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -518,7 +522,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Siliang Ming, Saira Qurban, Yu Du, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.202102024" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.202102024</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210907%2F10.1002_chem.202102024.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210907%2F10.1002_chem.202102024.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210907%2F10.1002_chem.202102024.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210907%2F10.1002_chem.202102024.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -528,7 +532,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yiqiang Tian, Xiaojie Liu, Bangyue He, Yuxi Ren, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">RSC Advances</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d1ra03992j" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d1ra03992j</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210603%2F10.1039_D1RA03992J.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210603%2F10.1039_D1RA03992J.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210603%2F10.1039_D1RA03992J.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210603%2F10.1039_D1RA03992J.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -538,7 +542,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Bangyue He, Xiaojie Liu, Hongyi Li, Xiaofeng Zhang, Yuxi Ren, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.1c01103" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.1c01103</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210606%2F10.1021_acs.orglett.1c01103.gif" target="_blank"><img src="https://xpic.x-mol.com/20210606%2F10.1021_acs.orglett.1c01103.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210606%2F10.1021_acs.orglett.1c01103.gif" target="_blank"><img src="https://xpic.x-mol.com/20210606%2F10.1021_acs.orglett.1c01103.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -548,7 +552,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yawei Tian, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Asian Journal of Organic Chemistry</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1002/ajoc.202100293" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/ajoc.202100293</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210717%2F10.1002_ajoc.202100293.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210717%2F10.1002_ajoc.202100293.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210717%2F10.1002_ajoc.202100293.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210717%2F10.1002_ajoc.202100293.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -568,7 +572,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yuanfei Zhang, Zhe-Ning Chen, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Tetrahedron Letters</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1016/j.tetlet.2021.153049" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1016/j.tetlet.2021.153049</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210515%2F10.1016_j.tetlet.2021.153049.gif" target="_blank"><img src="https://xpic.x-mol.com/20210515%2F10.1016_j.tetlet.2021.153049.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210515%2F10.1016_j.tetlet.2021.153049.gif" target="_blank"><img src="https://xpic.x-mol.com/20210515%2F10.1016_j.tetlet.2021.153049.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -588,7 +592,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Rong Hu, Yigao Tao, Xiaofeng Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.202014900" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.202014900</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210331%2F10.1002_anie.202014900.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210331%2F10.1002_anie.202014900.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210331%2F10.1002_anie.202014900.jpg" target="_blank"><img src="https://xpic.x-mol.com/20210331%2F10.1002_anie.202014900.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2021">
@@ -598,7 +602,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yiwen Zhang, Min Zhang, Zhengbo Han, Shijun Huang, Daqiang Yuan, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">ACS Catalysis</span> &mdash; <strong>2021</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acscatal.0c05205" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acscatal.0c05205</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210206%2F10.1021_acscatal.0c05205.gif" target="_blank"><img src="https://xpic.x-mol.com/20210206%2F10.1021_acscatal.0c05205.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20210206%2F10.1021_acscatal.0c05205.gif" target="_blank"><img src="https://xpic.x-mol.com/20210206%2F10.1021_acscatal.0c05205.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2020">
@@ -618,7 +622,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Richa, Rajesh Kumar, Xiaofeng Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Chemistry Frontiers</span> &mdash; <strong>2020</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d0qo00911c" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d0qo00911c</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20201001%2F10.1039_D0QO00911C.jpg" target="_blank"><img src="https://xpic.x-mol.com/20201001%2F10.1039_D0QO00911C.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20201001%2F10.1039_D0QO00911C.jpg" target="_blank"><img src="https://xpic.x-mol.com/20201001%2F10.1039_D0QO00911C.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2020">
@@ -628,7 +632,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yuanfei Zhang, Ting Huang, Xinghua Li, Min Zhang, Ying Song, Kelin Huang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">RSC Advances</span> &mdash; <strong>2020</strong> &mdash; DOI: <a href="https://doi.org/10.1039/d0ra03348k" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/d0ra03348k</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20201228%2F10.1039_D0RA03348K.jpg" target="_blank"><img src="https://xpic.x-mol.com/20201228%2F10.1039_D0RA03348K.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20201228%2F10.1039_D0RA03348K.jpg" target="_blank"><img src="https://xpic.x-mol.com/20201228%2F10.1039_D0RA03348K.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2020">
@@ -638,7 +642,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yuanfei Zhang, Zhe-Ning Chen, Xiaofeng Zhang, Xi Deng, Wei Zhuang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Communications Chemistry</span> &mdash; <strong>2020</strong> &mdash; DOI: <a href="https://doi.org/10.1038/s42004-020-0287-0" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1038/s42004-020-0287-0</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20200401%2F10.1038_s42004-020-0287-0.png" target="_blank"><img src="https://xpic.x-mol.com/20200401%2F10.1038_s42004-020-0287-0.png" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20200401%2F10.1038_s42004-020-0287-0.png" target="_blank"><img src="https://xpic.x-mol.com/20200401%2F10.1038_s42004-020-0287-0.png" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2020">
@@ -648,7 +652,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Biping Xu, Yaping Shang, Xiaoming Jie, Xiaofeng Zhang, Jian Kan, Subhash Laxman Yedage, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Green Chemistry</span> &mdash; <strong>2020</strong> &mdash; DOI: <a href="https://doi.org/10.1039/c9gc03845k" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/c9gc03845k</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20200325%2F10.1039_C9GC03845K.jpg" target="_blank"><img src="https://xpic.x-mol.com/20200325%2F10.1039_C9GC03845K.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20200325%2F10.1039_C9GC03845K.jpg" target="_blank"><img src="https://xpic.x-mol.com/20200325%2F10.1039_C9GC03845K.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2019">
@@ -668,7 +672,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jian Kan, Min Zhang, Xiaofeng Zhang, Xin Lou, Yaping Shang, Biping Xu, Fanyuanhang Yang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2019</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.201904612" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.201904612</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904612.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904612.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904612.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904612.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2019">
@@ -678,7 +682,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jian Kan, Min Zhang, Xiaofeng Zhang, Xin Lou, Yaping Shang, Biping Xu, Fanyuanhang Yang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2019</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.201904611" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.201904611</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904611.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904611.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904611.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201904611.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2019">
@@ -688,7 +692,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jian Kan, Min Zhang, Xiaofeng Zhang, Xin Lou, Yaping Shang, Biping Xu, Fanyuanhang Yang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - A European Journal</span> &mdash; <strong>2019</strong> &mdash; DOI: <a href="https://doi.org/10.1002/chem.201903551" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/chem.201903551</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201903551.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201903551.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20191025%2F10.1002_chem.201903551.jpg" target="_blank"><img src="https://xpic.x-mol.com/20191025%2F10.1002_chem.201903551.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2019">
@@ -698,7 +702,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Rong Hu, Fa-Jie Chen, Xiaofeng Zhang, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Nature Communications</span> &mdash; <strong>2019</strong> &mdash; DOI: <a href="https://doi.org/10.1038/s41467-019-11624-9" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1038/s41467-019-11624-9</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20190816%2F10.1038_s41467-019-11624-9.jpg" target="_blank"><img src="https://xpic.x-mol.com/20190816%2F10.1038_s41467-019-11624-9.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20190816%2F10.1038_s41467-019-11624-9.jpg" target="_blank"><img src="https://xpic.x-mol.com/20190816%2F10.1038_s41467-019-11624-9.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2019">
@@ -708,7 +712,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yaping Shang, Krishna Jonnada, Subhash Laxman Yedage, Hua Tu, Xiaofeng Zhang, Xin Lou, Shijun Huang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Communications</span> &mdash; <strong>2019</strong> &mdash; DOI: <a href="https://doi.org/10.1039/c9cc04529e" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1039/c9cc04529e</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20190808%2F10.1039_C9CC04529E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20190808%2F10.1039_C9CC04529E.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20190808%2F10.1039_C9CC04529E.jpg" target="_blank"><img src="https://xpic.x-mol.com/20190808%2F10.1039_C9CC04529E.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2018">
@@ -718,7 +722,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaoming Jie, Yaping Shang, Zhe-Ning Chen, Xiaofeng Zhang, Wei Zhuang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Nature Communications</span> &mdash; <strong>2018</strong> &mdash; DOI: <a href="https://doi.org/10.1038/s41467-018-07534-x" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1038/s41467-018-07534-x</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20181128%2F10.1038_s41467-018-07534-x.jpg" target="_blank"><img src="https://xpic.x-mol.com/20181128%2F10.1038_s41467-018-07534-x.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20181128%2F10.1038_s41467-018-07534-x.jpg" target="_blank"><img src="https://xpic.x-mol.com/20181128%2F10.1038_s41467-018-07534-x.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2018">
@@ -728,7 +732,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Qingjuan Han, Kun Jiang, Ye Wei, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Asian Journal of Organic Chemistry</span> &mdash; <strong>2018</strong> &mdash; DOI: <a href="https://doi.org/10.1002/ajoc.201800177" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/ajoc.201800177</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180620%2F10.1002_ajoc.201800177.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180620%2F10.1002_ajoc.201800177.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180620%2F10.1002_ajoc.201800177.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180620%2F10.1002_ajoc.201800177.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2018">
@@ -738,7 +742,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jianchen Shen, Biping Xu, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">European Journal of Organic Chemistry</span> &mdash; <strong>2018</strong> &mdash; DOI: <a href="https://doi.org/10.1002/ejoc.201800330" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/ejoc.201800330</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180526%2F10.1002_ejoc.201800330.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180526%2F10.1002_ejoc.201800330.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180526%2F10.1002_ejoc.201800330.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180526%2F10.1002_ejoc.201800330.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2018">
@@ -758,7 +762,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Quandi Jiang, Hongyi Li, Xiaofeng Zhang, Biping Xu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2018</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.8b00772" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.8b00772</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180407%2F10.1021_acs.orglett.8b00772.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180407%2F10.1021_acs.orglett.8b00772.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/20180407%2F10.1021_acs.orglett.8b00772.jpg" target="_blank"><img src="https://xpic.x-mol.com/20180407%2F10.1021_acs.orglett.8b00772.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2017">
@@ -788,7 +792,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ye Wei, Peng Hu, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Reviews</span> &mdash; <strong>2017</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.chemrev.6b00516" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.chemrev.6b00516</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2017">
@@ -798,7 +802,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ye Wei, Peng Hu, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemical Reviews</span> &mdash; <strong>2017</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.chemrev.6b00516" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.chemrev.6b00516</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemical_Reviews%2Fcr-2016-005168_0098.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2016">
@@ -838,7 +842,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaoming Jie, Yaping Shang, Xiaofeng Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Journal of the American Chemical Society</span> &mdash; <strong>2016</strong> &mdash; DOI: <a href="https://doi.org/10.1021/jacs.6b01337" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/jacs.6b01337</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FJournal_of_the_American_Chemical_Society%2Fja-2016-01337k_0001.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FJournal_of_the_American_Chemical_Society%2Fja-2016-01337k_0001.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FJournal_of_the_American_Chemical_Society%2Fja-2016-01337k_0001.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FJournal_of_the_American_Chemical_Society%2Fja-2016-01337k_0001.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2016">
@@ -848,7 +852,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Quandi Jiang, Changlei Zhu, Huaiqing Zhao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Chemistry - An Asian Journal</span> &mdash; <strong>2016</strong> &mdash; DOI: <a href="https://doi.org/10.1002/asia.201600047" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/asia.201600047</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemistry_-_An_Asian_Journal%2F8ced1c8dcc0e7f7da77fed0ea6587d0d8b9c0741.png" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemistry_-_An_Asian_Journal%2F8ced1c8dcc0e7f7da77fed0ea6587d0d8b9c0741.png" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FChemistry_-_An_Asian_Journal%2F8ced1c8dcc0e7f7da77fed0ea6587d0d8b9c0741.png" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FChemistry_-_An_Asian_Journal%2F8ced1c8dcc0e7f7da77fed0ea6587d0d8b9c0741.png" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2015">
@@ -868,7 +872,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Changlei Zhu, Yuanfei Zhang, Jian Kan, Huaiqing Zhao, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Organic Letters</span> &mdash; <strong>2015</strong> &mdash; DOI: <a href="https://doi.org/10.1021/acs.orglett.5b01398" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/acs.orglett.5b01398</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FOrganic_Letters%2Fol-2015-013988_0009.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FOrganic_Letters%2Fol-2015-013988_0009.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/thesis%2FOrganic_Letters%2Fol-2015-013988_0009.gif" target="_blank"><img src="https://xpic.x-mol.com/thesis%2FOrganic_Letters%2Fol-2015-013988_0009.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2015">
@@ -918,7 +922,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yuanfei Zhang, Huaiqing Zhao, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2015</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201411701" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201411701</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201411701.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201411701.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201411701.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201411701.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2015">
@@ -938,7 +942,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Jian Kan, Shijun Huang, Jin Lin, Min Zhang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2014</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201408630" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201408630</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201408630.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201408630.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201408630.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201408630.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2014">
@@ -1078,7 +1082,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Xiaoming Jie, Yaping Shang, Peng Hu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2013</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201210013" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201210013</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201210013.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201210013.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201210013.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201210013.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2013">
@@ -1118,7 +1122,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Yaping Shang, Xiaoming Jie, Jun Zhou, Peng Hu, Shijun Huang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2012</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201208627" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201208627</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201208627.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201208627.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201208627.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201208627.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2012">
@@ -1168,7 +1172,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Peng Hu, Yaping Shang, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2012</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201200153" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201200153</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201200153.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201200153.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201200153.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201200153.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2012">
@@ -1188,7 +1192,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Peng Hu, Min Zhang, Xiaoming Jie, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2011</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201106451" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201106451</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201106451.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201106451.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201106451.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201106451.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2011">
@@ -1228,7 +1232,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Peng Hu, Shijun Huang, Jing Xu, Zhang‐Jie Shi, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Angewandte Chemie International Edition</span> &mdash; <strong>2011</strong> &mdash; DOI: <a href="https://doi.org/10.1002/anie.201103380" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1002/anie.201103380</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201103380.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201103380.jpg" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201103380.jpg" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FAngewandte_Chemie_International_Edition_All_img%2F10.1002_anie.201103380.jpg" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2011">
@@ -1248,7 +1252,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Wenliang Wu, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Journal of the American Chemical Society</span> &mdash; <strong>2011</strong> &mdash; DOI: <a href="https://doi.org/10.1021/ja2048495" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/ja2048495</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja2048495.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja2048495.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja2048495.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja2048495.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2011">
@@ -1288,7 +1292,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ye Wei, <span class="su-name">Weiping Su</span></div>
 <div class="paper-meta"><span class="journal">Journal of the American Chemical Society</span> &mdash; <strong>2010</strong> &mdash; DOI: <a href="https://doi.org/10.1021/ja109383e" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/ja109383e</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja109383e.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja109383e.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja109383e.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja109383e.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2010">
@@ -1358,7 +1362,7 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 <div class="paper-authors">Ye Wei, Huaiqing Zhao, Jian Kan, <span class="su-name">Weiping Su</span>, Maochun Hong</div>
 <div class="paper-meta"><span class="journal">Journal of the American Chemical Society</span> &mdash; <strong>2010</strong> &mdash; DOI: <a href="https://doi.org/10.1021/ja910461e" target="_blank" style="color:#003ec7;text-decoration:underline;">10.1021/ja910461e</a></div>
 </div>
-<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja910461e.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja910461e.gif" alt="Reaction" loading="lazy" onerror="this.parentElement.style.display='none'"></a></div>
+<div class="paper-reaction"><a href="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja910461e.gif" target="_blank"><img src="https://xpic.x-mol.com/paperImg%2F2020_03_12%2FJournal_of_the_American_Chemical_Society_All_img%2F10.1021_ja910461e.gif" alt="Reaction" loading="lazy" onerror="this.closest('.paper-reaction').style.display='none'"></a></div>
 </div>
 </div>
 <div class="paper-entry" data-year="2009">
@@ -1663,6 +1667,6 @@ body{font-family:'Manrope',sans-serif;background:#f6fafe;color:#171c1f}
 </div>
 </div></div></div>
 <script>
-function filterPapers(btn){var year=btn.dataset.year;document.querySelectorAll('.year-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');document.querySelectorAll('.paper-entry').forEach(function(e){e.style.display=(year==='all'||e.dataset.year===year)?'':'none'})}
+function filterPapers(sel){var year=sel.value;document.querySelectorAll('.paper-entry').forEach(function(e){e.style.display=(year==='all'||e.dataset.year===year)?'':'none'})}
 </script>
 </body></html>
