@@ -504,3 +504,20 @@ select[data-theme-picker] {
 }
 
 /* ===== End publications override ===== */
+
+
+/* ===== Safari mobile nav SVG fix ===== */
+/* Prevent Safari from rendering inline SVG hamburger/close icons at full viewBox size */
+#show-button, #hide-button {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  overflow: visible !important;
+}
+/* Make sure SVG doesn't scale based on viewBox in mobile Safari */
+label[for="nav-toggle"] svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  max-width: 1.5rem !important;
+  max-height: 1.5rem !important;
+}
+/* ===== End Safari SVG fix ===== */
