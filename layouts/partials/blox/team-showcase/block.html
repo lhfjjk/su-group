@@ -87,6 +87,26 @@
     {{ end }}
   </div>
 
+  {{/* TAIZI DEBUG: Show authors data directly on page */}}
+  {{ $debugAuthors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
+  <div style="background:#ff0;border:3px solid red;padding:20px;margin:20px 0;font-size:20px;z-index:9999;position:relative;">
+    <h3 style="color:red;margin:0 0 10px 0;">🔴 TAIZI DEBUG: Authors Data</h3>
+    <p style="margin:0;"><strong>Authors count from get_authors_data:</strong> {{ len $debugAuthors }}</p>
+    <p style="margin:5px 0;"><strong>hugo.Data.authors count:</strong> {{ len hugo.Data.authors }}</p>
+    <p style="margin:5px 0;"><strong>site.Language.Lang:</strong> {{ site.Language.Lang }}</p>
+    <ul style="max-height:300px;overflow-y:scroll;">
+    {{ range $k, $v := $debugAuthors }}
+      <li style="margin:3px 0;"><strong>{{ $k }}:</strong> name={{ with $v.name }}{{ . }}{{ else }}MISSING{{ end }}, user_groups={{ $v.user_groups }}</li>
+    {{ else }}
+      <li style="color:red;">❌ NO AUTHORS FOUND in get_authors_data</li>
+    {{ end }}
+    </ul>
+    <details style="margin-top:10px;">
+      <summary style="cursor:pointer;font-weight:bold;">Show hugo.Data.authors raw</summary>
+      <pre style="background:#eee;padding:10px;overflow-x:auto;font-size:12px;max-height:200px;overflow-y:scroll;">{{ jsonify $debugAuthors 2 }}</pre>
+    </details>
+  </div>
+
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
