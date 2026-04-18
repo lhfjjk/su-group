@@ -90,15 +90,9 @@
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
-  {{ $debug_count := len $authors }}
-  {{ $debug_first := "" }}
-  {{ range $k, $_ := $authors }}{{ if eq $debug_first "" }}{{ $debug_first = $k }}{{ end }}{{ end }}
-  {{ warnf "TAIZI_DEBUG: authors_count=%d first_slug=%s" $debug_count $debug_first }}
-  {{ $test_profile := partial "functions/get_author_profile" (dict "slug" $debug_first) }}
-  {{ with $test_profile }}
-    {{ warnf "TAIZI_DEBUG: profile=%s" .name }}
-  {{ else }}
-    {{ warnf "TAIZI_DEBUG: profile is EMPTY for slug=%s" $debug_first }}
+  {{ warnf "TAIZI: START authors is empty=%v len=%d" (eq (len $authors) 0) (len $authors) }}
+  {{ range $k, $_ := $authors }}
+    {{ warnf "TAIZI: in-loop author slug=%s" $k }}
   {{ end }}
   {{ $debug_authors_count := len $authors }}
   {{ $debug_slug_example := "" }}
