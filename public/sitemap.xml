@@ -116,6 +116,8 @@
   <url>
     <loc>https://lhfjjk.github.io/su-group/courses/hugo-blox/guide/formatting/cards/</loc><changefreq>weekly</changefreq></url>
   <url>
+    <loc>https://lhfjjk.github.io/su-group/debug/</loc><changefreq>weekly</changefreq></url>
+  <url>
     <loc>https://lhfjjk.github.io/su-group/courses/hugo-blox/reference/i18n/</loc><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://lhfjjk.github.io/su-group/facilities/</loc><changefreq>weekly</changefreq></url>
@@ -130,4 +132,6 @@
   <url>
     <loc>https://lhfjjk.github.io/su-group/courses/hugo-blox/guide/formatting/toggle/</loc><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://lhfjjk.github.io/su-group/courses/hugo-blox/guide/formatting/steps/</loc><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://lhfjjk.github.io/su-group/courses/hugo-blox/guide/formatting/steps/</loc><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://lhfjjk.github.io/su-group/team/debug/</loc><changefreq>weekly</changefreq></url></urlset>
