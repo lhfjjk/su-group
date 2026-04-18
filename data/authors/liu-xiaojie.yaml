@@ -1,12 +1,12 @@
 name:
-  display: "刘晓洁"
-role: "Faculty"
-bio: ""
+  display: 刘晓洁
+role: Faculty
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:17853537821@163.com"
+- icon: envelope
+  url: mailto:17853537821@163.com
 user_groups:
-  - Faculty
-
+- Alumni
+weight: 92

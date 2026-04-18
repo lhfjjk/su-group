@@ -1,12 +1,12 @@
 name:
-  display: "张晓峰"
-role: "Faculty"
-bio: ""
+  display: 张晓峰
+role: Faculty
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:zhangxiaofeng@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:zhangxiaofeng@fjirsm.ac.cn
 user_groups:
-  - Faculty
-
+- Alumni
+weight: 96

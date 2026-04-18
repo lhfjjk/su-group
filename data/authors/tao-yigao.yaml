@@ -1,12 +1,12 @@
 name:
-  display: "陶艺高"
-role: "Postdoctoral Researcher"
-bio: ""
+  display: 陶艺高
+role: Postdoctoral Researcher
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:taoyg@shanghaitech.edu.cn"
+- icon: envelope
+  url: mailto:taoyg@shanghaitech.edu.cn
 user_groups:
-  - Postdocs
-
+- Postdoctoral Researchers
+weight: 21
