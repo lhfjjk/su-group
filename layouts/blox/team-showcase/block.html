@@ -82,6 +82,17 @@
     {{ end }}
   </div>
 
+  {{/* TAIZI DEBUG: Show authors data directly */}}
+  {{ $debugAuthors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
+  <!-- TAIZI_DEBUG_START
+  Authors count: {{ len $debugAuthors }}
+  hugo.Data.authors count: {{ len hugo.Data.authors }}
+  site.Language.Lang: {{ site.Language.Lang }}
+  {{ range $k, $v := $debugAuthors }}
+  - author_slug={{ $k }}, name={{ with $v.name }}{{ . }}{{ else }}MISSING{{ end }}, groups={{ $v.user_groups }}
+  {{ end }}
+  TAIZI_DEBUG_END -->
+
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
