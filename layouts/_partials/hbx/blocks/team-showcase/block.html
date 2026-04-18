@@ -82,6 +82,22 @@
     {{ end }}
   </div>
 
+  {{/* TAIZI DEBUG */}}
+  {{ $debugAuthors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
+  <div id="taizi-debug" style="background:yellow;border:5px solid red;padding:15px;margin:15px 0;">
+    <h3 style="color:red;margin:0 0 10px 0;">TAIZI_DEBUG: Authors Data</h3>
+    <p><strong>get_authors_data count:</strong> {{ len $debugAuthors }}</p>
+    <p><strong>hugo.Data.authors count:</strong> {{ len hugo.Data.authors }}</p>
+    <p><strong>site.Language.Lang:</strong> {{ site.Language.Lang }}</p>
+    <ul>
+    {{ range $k, $v := $debugAuthors }}
+      <li>{{ $k }}: name={{ with $v.name }}{{ . }}{{ else }}MISSING{{ end }}</li>
+    {{ else }}
+      <li style="color:red;">❌ NO AUTHORS FOUND</li>
+    {{ end }}
+    </ul>
+  </div>
+
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
