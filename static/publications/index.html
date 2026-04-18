@@ -4204,7 +4204,7 @@ function filterPapers(sel){var year=sel.value;document.querySelectorAll('.paper-
       img.style.maxWidth = '200px';
       img.style.height = 'auto';
     } else {
-      img.style.maxWidth = infoWidth + 'px';
+      img.style.maxWidth = Math.min(infoWidth, 400) + 'px';
       img.style.height = 'auto';
     }
     img.style.display = 'block';
