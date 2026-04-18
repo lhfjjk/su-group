@@ -4200,7 +4200,7 @@ function filterPapers(sel){var year=sel.value;document.querySelectorAll('.paper-
     var entry = img.closest('.paper-entry');
     var info = entry ? entry.querySelector('.paper-info') : null;
     var infoWidth = info ? info.offsetWidth : 400;
-    if (img.naturalWidth > img.naturalHeight * 2) {
+    if (img.naturalHeight > img.naturalWidth * 2) {
       img.style.maxWidth = '200px';
       img.style.height = 'auto';
     } else {
