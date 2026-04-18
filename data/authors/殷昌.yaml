@@ -1,0 +1,13 @@
+name:
+  display: "殷昌"
+role: "PhD Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:yinchang@fjirsm.ac.cn"
+user_groups:
+  - PhD Students
+  graduation_year: "三年级"
+  avatar: "media/authors/殷昌.jpg"

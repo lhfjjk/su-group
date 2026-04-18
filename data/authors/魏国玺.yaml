@@ -1,0 +1,13 @@
+name:
+  display: "魏国玺"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:weiguoxi24@mails.ucas.ac.cn"
+user_groups:
+  - Master Students
+  graduation_year: "二年级"
+  avatar: "media/authors/魏国玺.jpg"

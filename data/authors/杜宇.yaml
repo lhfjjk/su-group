@@ -1,0 +1,12 @@
+name:
+  display: "杜宇"
+role: "Researcher"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:duyu@fjirsm.ac.cn"
+user_groups:
+  - Principal Investigators
+  avatar: "media/authors/杜宇.jpg"

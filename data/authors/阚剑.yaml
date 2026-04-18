@@ -1,0 +1,12 @@
+name:
+  display: "阚剑"
+role: "Researcher"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:jkan@fjirsm.ac.cn"
+user_groups:
+  - Principal Investigators
+  avatar: "media/authors/阚剑.jpg"

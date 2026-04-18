@@ -1,0 +1,13 @@
+name:
+  display: "许晴"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:18395591660@163.com"
+user_groups:
+  - Master Students
+  graduation_year: "一年级"
+  avatar: "media/authors/许晴.jpg"

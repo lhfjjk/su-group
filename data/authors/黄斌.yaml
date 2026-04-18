@@ -1,0 +1,13 @@
+name:
+  display: "黄斌"
+role: "Master Student"
+bio: ""
+interests: []
+affiliations: []
+links:
+  - icon: envelope
+    url: "mailto:13843636712@163.com"
+user_groups:
+  - Master Students
+  graduation_year: "二年级"
+  avatar: "media/authors/黄斌.jpg"
