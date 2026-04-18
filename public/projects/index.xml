@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lab Facilities | </title>
+    <link>https://lhfjjk.github.io/su-group/projects/</link>
+      <atom:link href="https://lhfjjk.github.io/su-group/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Lab Facilities</description>
+    <generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lhfjjk.github.io/su-group/media/icon_hu_da05098ef60dc2e7.png</url>
+      <title>Lab Facilities</title>
+      <link>https://lhfjjk.github.io/su-group/projects/</link>
+    </image>
+    
+    <item>
+      <title>DFT Computing Cluster</title>
+      <link>https://lhfjjk.github.io/su-group/projects/dft-computing-cluster/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/dft-computing-cluster/</guid>
+      <description>&lt;p&gt;High-performance computing cluster for theoretical calculations&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Electrochemical Cell</title>
+      <link>https://lhfjjk.github.io/su-group/projects/electrochemical-cell/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/electrochemical-cell/</guid>
+      <description>&lt;p&gt;Electrochemical workstation&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Flash Chromatography</title>
+      <link>https://lhfjjk.github.io/su-group/projects/flash-chromatography/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/flash-chromatography/</guid>
+      <description>&lt;p&gt;Automated flash chromatography system&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FT-IR Spectrometer</title>
+      <link>https://lhfjjk.github.io/su-group/projects/ft-ir-spectrometer/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/ft-ir-spectrometer/</guid>
+      <description>&lt;p&gt;Fourier-transform infrared spectrometer&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GC-MS System</title>
+      <link>https://lhfjjk.github.io/su-group/projects/gc-ms-system/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/gc-ms-system/</guid>
+      <description>&lt;p&gt;Gas chromatography-mass spectrometry for compound identification&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Glove Box</title>
+      <link>https://lhfjjk.github.io/su-group/projects/glove-box/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/glove-box/</guid>
+      <description>&lt;p&gt;Moisture-free glove box for sensitive manipulations&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HPLC System</title>
+      <link>https://lhfjjk.github.io/su-group/projects/hplc-system/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/hplc-system/</guid>
+      <description>&lt;p&gt;High-performance liquid chromatography for purification&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mass Spectrometer</title>
+      <link>https://lhfjjk.github.io/su-group/projects/mass-spectrometer/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/mass-spectrometer/</guid>
+      <description>&lt;p&gt;High-resolution mass spectrometer&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Microwave Reactor</title>
+      <link>https://lhfjjk.github.io/su-group/projects/microwave-reactor/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/microwave-reactor/</guid>
+      <description>&lt;p&gt;Microwave-assisted synthesis reactor&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NMR Spectrometer</title>
+      <link>https://lhfjjk.github.io/su-group/projects/nmr-spectrometer/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/nmr-spectrometer/</guid>
+      <description>&lt;p&gt;High-field NMR for structural analysis&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Photochemical Reactor</title>
+      <link>https://lhfjjk.github.io/su-group/projects/photochemical-reactor/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/photochemical-reactor/</guid>
+      <description>&lt;p&gt;LED-based photochemical reactor for photocatalysis&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rotary Evaporator</title>
+      <link>https://lhfjjk.github.io/su-group/projects/rotary-evaporator/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/rotary-evaporator/</guid>
+      <description>&lt;p&gt;Professional-grade rotary evaporators for solvent removal&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Schlenk Line</title>
+      <link>https://lhfjjk.github.io/su-group/projects/schlenk-line/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/schlenk-line/</guid>
+      <description>&lt;p&gt;Advanced schlenk line for air-sensitive reactions&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UV-Vis Spectrometer</title>
+      <link>https://lhfjjk.github.io/su-group/projects/uv-vis-spectrometer/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/uv-vis-spectrometer/</guid>
+      <description>&lt;p&gt;UV-Vis spectrophotometer for absorption analysis&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>https://lhfjjk.github.io/su-group/projects/pandas/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/pandas/</guid>
+      <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PyTorch</title>
+      <link>https://lhfjjk.github.io/su-group/projects/pytorch/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/pytorch/</guid>
+      <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>scikit-learn</title>
+      <link>https://lhfjjk.github.io/su-group/projects/scikit/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://lhfjjk.github.io/su-group/projects/scikit/</guid>
+      <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
