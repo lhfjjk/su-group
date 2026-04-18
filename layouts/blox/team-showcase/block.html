@@ -85,6 +85,10 @@
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
+  {{ $authorsLen := $authors | len }}
+  {{ warnf "TAIZI_DEBUG: len(authors)=%v" $authorsLen }}
+  {{ $firstSlug := "" }}{{ range $k, $v := $authors }}{{ if eq $firstSlug "" }}{{ $firstSlug = $k }}{{ end }}{{ end }}
+  {{ warnf "TAIZI_DEBUG: first_slug=%v" $firstSlug }}
   {{ range $slug, $_ := $authors }}
     {{ $profile := partial "functions/get_author_profile" (dict "slug" $slug) }}
     {{ $profileData := index $authors $slug }}
