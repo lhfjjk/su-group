@@ -57,18 +57,6 @@
 {{ end }}
 <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,62,199,0.2) 0%, transparent 50%);"></div>
 </div>
-{{/* 浮动信息卡 */}}
-<div class="absolute -bottom-6 -right-6 md:-right-12 p-6 rounded-lg max-w-[280px]" style="background: var(--color-surface-container-lowest, #fff); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1); border: 1px solid color-mix(in srgb, var(--color-outline-variant, #c3c5d9) 15%, transparent);">
-<div class="flex items-center gap-4 mb-4">
-<div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: var(--color-secondary-container, #95aafe); color: var(--color-on-secondary-container, #253b89);">
-{{ partial "functions/get_icon" (dict "name" "hero/circle-stack" "attributes" "style=\"width:20px;height:20px;\"") }}
-</div>
-<span class="text-xs font-bold uppercase tracking-widest" style="color: var(--color-secondary, #4459a8);">ICCAS LAB 302</span>
-</div>
-<p class="text-sm font-semibold leading-snug" style="color: var(--color-on-surface, #171c1f); font-family: 'Manrope', sans-serif;">
-Leading international collaborative research in transition-metal catalysis.
-</p>
-</div>
 </div>
 
 {{/* === 右侧：文字内容 (7列) === */}}
@@ -76,7 +64,7 @@ Leading international collaborative research in transition-metal catalysis.
 {{/* 标签 */}}
 <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-6 flex items-center gap-2" style="color: var(--color-primary, #003ec7);">
 {{ partial "functions/get_icon" (dict "name" "hero/academic-cap" "attributes" "style=\"width:1em;height:1em;\"") }}
-Institute of Chemistry, Chinese Academy of Sciences
+中国科学院福建物质结构研究所
 </span>
 
 {{/* 标题 */}}
