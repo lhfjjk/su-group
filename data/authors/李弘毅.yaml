@@ -1,13 +1,13 @@
 name:
-  display: "李弘毅"
-role: "Temporary Staff"
-bio: ""
+  display: 李弘毅
+role: 其他
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:hyli@ptu.edu.cn"
+- icon: envelope
+  url: mailto:hyli@ptu.edu.cn
 user_groups:
-  - Other Staff
-avatar: "media/authors/李弘毅.jpg"
+- Other Staff
+avatar: media/authors/李弘毅.jpg
 weight: 11

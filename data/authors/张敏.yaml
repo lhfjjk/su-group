@@ -1,13 +1,13 @@
 name:
-  display: "张敏"
-role: "Researcher"
-bio: ""
+  display: 张敏
+role: 其他
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:zhangmin@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:zhangmin@fjirsm.ac.cn
 user_groups:
-  - Principal Investigators
-avatar: "media/authors/张敏.jpg"
-weight: 11
+- Principal Investigators
+avatar: media/authors/张敏.jpg
+weight: 1

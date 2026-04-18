@@ -1,13 +1,13 @@
 name:
-  display: "贾思柔"
-role: "Master Student"
-bio: ""
+  display: 贾思柔
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:13403473164@163.com"
+- icon: envelope
+  url: mailto:13403473164@163.com
 user_groups:
-  - Master Students
-avatar: "media/authors/贾思柔.jpg"
+- Master Students
+avatar: media/authors/贾思柔.jpg
 weight: 61

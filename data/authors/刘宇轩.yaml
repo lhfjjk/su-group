@@ -1,13 +1,13 @@
 name:
-  display: "刘宇轩"
-role: "Master Student"
-bio: ""
+  display: 刘宇轩
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:izone0419@163.com"
+- icon: envelope
+  url: mailto:izone0419@163.com
 user_groups:
-  - Master Students
-avatar: "media/authors/刘宇轩(1).jpg"
+- Master Students
+avatar: media/authors/刘宇轩.jpg
 weight: 62

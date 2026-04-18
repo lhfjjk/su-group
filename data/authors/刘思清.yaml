@@ -1,13 +1,13 @@
 name:
-  display: "刘思清"
-role: "Postdoctoral Researcher"
-bio: ""
+  display: 刘思清
+role: 博士后
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:liusiqing@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:liusiqing@fjirsm.ac.cn
 user_groups:
-  - Postdoctoral Researchers
-avatar: "media/authors/刘思清.jpg"
+- Postdoctoral Researchers
+avatar: media/authors/刘思清.jpg
 weight: 21

@@ -1,13 +1,13 @@
 name:
-  display: "林晓宇"
-role: "PhD Student"
-bio: ""
+  display: 林晓宇
+role: 博士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:1005775920@qq.com"
+- icon: envelope
+  url: mailto:1005775920@qq.com
 user_groups:
-  - PhD Students
-avatar: "media/authors/林晓宇.jpg"
+- PhD Students
+avatar: media/authors/林晓宇.jpg
 weight: 32

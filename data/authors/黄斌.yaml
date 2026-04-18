@@ -1,13 +1,13 @@
 name:
-  display: "黄斌"
-role: "Master Student"
-bio: ""
+  display: 黄斌
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:13843636712@163.com"
+- icon: envelope
+  url: mailto:13843636712@163.com
 user_groups:
-  - Master Students
-avatar: "media/authors/黄斌.jpg"
+- Master Students
+avatar: media/authors/黄斌.jpg
 weight: 62

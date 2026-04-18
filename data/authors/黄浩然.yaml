@@ -1,13 +1,13 @@
 name:
-  display: "黄浩然"
-role: "PhD Student"
-bio: ""
+  display: 黄浩然
+role: 博士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:1004836576@qq.com"
+- icon: envelope
+  url: mailto:1004836576@qq.com
 user_groups:
-  - PhD Students
-avatar: "media/authors/黄浩然.jpg"
+- PhD Students
+avatar: media/authors/黄浩然.jpg
 weight: 31

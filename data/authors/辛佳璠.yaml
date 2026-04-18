@@ -1,13 +1,13 @@
 name:
-  display: "辛佳璠"
-role: "PhD Student"
-bio: ""
+  display: 辛佳璠
+role: 博士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:xinjiafan@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:xinjiafan@fjirsm.ac.cn
 user_groups:
-  - PhD Students
-avatar: "media/authors/辛佳璠.jpg"
+- PhD Students
+avatar: media/authors/辛佳璠.jpg
 weight: 31

@@ -1,13 +1,13 @@
 name:
-  display: "方小敏"
-role: "Master Student"
-bio: ""
+  display: 方小敏
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:2331995434@qq.com"
+- icon: envelope
+  url: mailto:2331995434@qq.com
 user_groups:
-  - Master Students
-avatar: "media/authors/方小敏.jpg"
+- Master Students
+avatar: media/authors/方小敏.jpg
 weight: 62

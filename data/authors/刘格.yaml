@@ -1,13 +1,13 @@
 name:
-  display: "刘格"
-role: "PhD Student"
-bio: ""
+  display: 刘格
+role: 博士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:liuge@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:liuge@fjirsm.ac.cn
 user_groups:
-  - PhD Students
-avatar: "media/authors/刘格.jpg"
+- PhD Students
+avatar: media/authors/刘格.jpg
 weight: 31

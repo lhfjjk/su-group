@@ -1,13 +1,13 @@
 name:
-  display: "高玉珍"
-role: "Researcher"
-bio: ""
+  display: 高玉珍
+role: 其他
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:gyz@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:gyz@fjirsm.ac.cn
 user_groups:
-  - Other Staff
-avatar: "media/authors/高玉珍.jpg"
-weight: 11
+- Principal Investigators
+avatar: media/authors/高玉珍.jpg
+weight: 1

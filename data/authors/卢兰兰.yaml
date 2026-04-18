@@ -1,13 +1,13 @@
 name:
-  display: "卢兰兰"
-role: "Master Student"
-bio: ""
+  display: 卢兰兰
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:3415416544@qq.com"
+- icon: envelope
+  url: mailto:3415416544@qq.com
 user_groups:
-  - Master Students
-avatar: "media/authors/卢兰兰.jpg"
+- Master Students
+avatar: media/authors/卢兰兰.jpg
 weight: 61

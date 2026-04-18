@@ -1,13 +1,13 @@
 name:
-  display: "葛国栋"
-role: "Master Student"
-bio: ""
+  display: 葛国栋
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:2389567264@qq.com"
+- icon: envelope
+  url: mailto:2389567264@qq.com
 user_groups:
-  - Master Students
-avatar: "media/authors/葛国栋.jpg"
+- Master Students
+avatar: media/authors/葛国栋.jpg
 weight: 61

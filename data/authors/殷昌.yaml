@@ -1,13 +1,13 @@
 name:
-  display: "殷昌"
-role: "PhD Student"
-bio: ""
+  display: 殷昌
+role: 博士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:yinchang@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:yinchang@fjirsm.ac.cn
 user_groups:
-  - PhD Students
-avatar: "media/authors/殷昌.jpg"
+- PhD Students
+avatar: media/authors/殷昌.jpg
 weight: 33

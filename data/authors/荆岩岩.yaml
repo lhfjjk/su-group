@@ -1,13 +1,13 @@
 name:
-  display: "荆岩岩"
-role: "Master Student"
-bio: ""
+  display: 荆岩岩
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:jingyanyan@fjirsm.ac.cn"
+- icon: envelope
+  url: mailto:jingyanyan@fjirsm.ac.cn
 user_groups:
-  - Master Students
-avatar: "media/authors/荆岩岩.jpg"
+- Master Students
+avatar: media/authors/荆岩岩.jpg
 weight: 61

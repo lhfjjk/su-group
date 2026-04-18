@@ -1,13 +1,13 @@
 name:
-  display: "郑毅晨"
-role: "Master Student"
-bio: ""
+  display: 郑毅晨
+role: 硕士
+bio: ''
 interests: []
 affiliations: []
 links:
-  - icon: envelope
-    url: "mailto:zyc034336@163.com"
+- icon: envelope
+  url: mailto:zyc034336@163.com
 user_groups:
-  - Master Students
-avatar: "media/authors/郑毅晨.jpg"
+- Master Students
+avatar: media/authors/郑毅晨.jpg
 weight: 61
