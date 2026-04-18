@@ -34,7 +34,7 @@
   {{ $parts := split $full_bio "\n\n" }}
   {{ if gt (len $parts) 1 }}
     {{ $bio_first = index $parts 0 }}
-    {{ $bio_rest = delimit (rest $parts) "\n\n" }}
+    {{ $bio_rest = delimit (after 1 $parts) "\n\n" }}
   {{ end }}
 {{ end }}
 
