@@ -90,6 +90,19 @@
   {{/* Build profiles from data/authors */}}
   {{ $allProfiles := slice }}
   {{ $authors := partialCached "functions/get_authors_data" $page site.Language.Lang }}
+  {{ $f := os.Create "taizi_debug.txt" }}
+  {{ $f.Write (printf "authors_len=%d\n" (len $authors)) }}
+  {{ range $k, $_ := $authors }}
+    {{ $f.Write (printf "author_slug=%s\n" $k) }}
+  {{ end }}
+  {{ $f.Close() }}
+  {{ $debug_file := "/tmp/taizi_debug.txt" }}
+  {{ $f := os.Create $debug_file }}
+  {{ $f.Write (printf "authors_len=%d\n" (len $authors)) }}
+  {{ range $k, $_ := $authors }}
+    {{ $f.Write (printf "author_slug=%s\n" $k) }}
+  {{ end }}
+  {{ $f.Close() }}
   {{ warnf "TAIZI: START authors is empty=%v len=%d" (eq (len $authors) 0) (len $authors) }}
   {{ range $k, $_ := $authors }}
     {{ warnf "TAIZI: in-loop author slug=%s" $k }}

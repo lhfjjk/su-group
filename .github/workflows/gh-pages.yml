@@ -61,6 +61,15 @@ jobs:
             echo "Static publications page restored ($(wc -c < static/publications/index.html) bytes)"
           fi
 
+      - name: Show taizi debug file
+        run: |
+          if [ -f taizi_debug.txt ]; then
+            echo "DEBUG FILE EXISTS:"
+            cat taizi_debug.txt
+          else
+            echo "DEBUG FILE NOT FOUND"
+          fi
+
       - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v4
