@@ -959,7 +959,7 @@ Done!
 
 
 
-&lt;div id=&#34;chart-712349856&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-947682135&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     async function fetchChartJSON() {
@@ -977,7 +977,7 @@ Done!
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-712349856&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-947682135&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
