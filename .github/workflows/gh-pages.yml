@@ -49,15 +49,59 @@ jobs:
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
-          # Force-copy local layouts override into theme module path
-          # This ensures our custom block.html with email text is used during build
-          if [ -f "layouts/blox/team-showcase/block.html" ]; then
-            mkdir -p "themes/wowchemy/modules/blox/blox/team-showcase/"
-            cp "layouts/blox/team-showcase/block.html" "themes/wowchemy/modules/blox/blox/team-showcase/block.html"
-            echo "Copied local block.html to theme path ($(wc -c < layouts/blox/team-showcase/block.html) bytes)"
+          # Also patch theme block.html to add email text (layouts override may not be picked up)
+          if [ -f "themes/wowchemy/modules/blox/blox/team-showcase/block.html" ]; then
+            # Patch: add flex+gap-1 class and email text span to mailto anchors (two locations)
+            sed -i 's|class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">\n                        {{ partial "functions/get_icon"|class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors flex items-center gap-1">\n                        {{ partial "functions/get_icon"|g' "themes/wowchemy/modules/blox/blox/team-showcase/block.html"
+            sed -i 's|{{ partial "functions/get_icon" (dict "name" \$iconName "attributes" "class=\\"w-5 h-5\\"") }}\n                      </a>|{{ partial "functions/get_icon" (dict "name" \$iconName "attributes" "class=\\"w-5 h-5\\"") }}\n                      {{ if and (eq \$iconName "envelope") (hasPrefix \$linkUrl "mailto:") }}<span class="text-sm">{{ strings.TrimPrefix "mailto:" \$linkUrl }}</span>{{ end }}\n                      </a>|g' "themes/wowchemy/modules/blox/blox/team-showcase/block.html"
+            echo "Theme block.html patched for email display"
           fi
           hugo 2>&1 | tee hugo_build.log
           echo "---TAIZI-DEBUG-END---"
+          
+          # Post-process: inject email text next to mailto envelope icons in team page HTML
+          # This ensures emails appear even if Hugo template override didn't work
+          if [ -f "public/team/index.html" ]; then
+            python3 << 'PYEOF'
+            import re, sys
+            with open('public/team/index.html', 'r', encoding='utf-8') as f:
+                content = f.read()
+            original_len = len(content)
+            # Pattern: <a ... aria-label="envelope" ... href="mailto:EMAIL" ...>SVG</a>
+            # We want to add <span class="text-sm">EMAIL</span> before </a>
+            def add_email_span(m):
+                full = m.group(0)
+                href = m.group(1)
+                if not href.startswith('mailto:'):
+                    return full
+                email = href[7:]  # remove 'mailto:'
+                # Check if already has the email text
+                if f'>{email}</span>' in full or f'>{email}</a>' in full:
+                    return full
+                # Add flex+gap-1 to existing class if not present
+                if 'class=' in full:
+                    new_full = re.sub(r'class="([^"]*)"', 
+                        lambda cm: f'class="{cm.group(1)} flex items-center gap-1"' if 'flex' not in cm.group(1) else cm.group(0),
+                        full, count=1)
+                else:
+                    new_full = full.replace('<a ', '<a class="flex items-center gap-1" ')
+                # Insert email span before </a>
+                email_span = f'<span class="text-sm">{email}</span>'
+                new_full = new_full.replace('</a>', f'{email_span}</a>')
+                return new_full
+            # Match mailto anchor with envelope aria-label
+            pattern = r'<a([^>]*href="mailto:[^"]*"[^>]*aria-label="envelope"[^>]*>.*?)</a>'
+            content = re.sub(pattern, add_email_span, content, flags=re.DOTALL)
+            with open('public/team/index.html', 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f'Post-processed team page: {original_len} -> {len(content)} bytes ({len(content)-original_len:+d})')
+            # Verify
+            if 'class="text-sm">zhangmin@fjirsm.ac.cn</span>' in content:
+                print('SUCCESS: email text injected!')
+            else:
+                print('WARNING: email text not found in output')
+            PYEOF
+          fi
 
       - name: Build search index (Pagefind)
         run: |
