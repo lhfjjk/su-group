@@ -8,11 +8,11 @@ sections:
     content:
       title: 'Our Team'
       subtitle: 'World-class researchers advancing organic synthesis'
-      text: 'Meet our group members - Principal Investigators, Postdoctoral Researchers, PhD Students, Master Students, and Alumni.'
+      text: 'Meet our group members - Supervisor, Postdoctoral Researchers, PhD Students, Master Students, and Alumni.'
   - block: team-showcase
     content:
       user_groups:
-        - Principal Investigators
+        - Supervisor
         - Other Staff
         - Postdoctoral Researchers
         - PhD Students
