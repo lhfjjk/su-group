@@ -305,8 +305,9 @@
                       {{ $target := "" }}
                       {{ if not $scheme }}{{ if not (hasPrefix $linkUrl "#") }}{{ $linkUrl = $linkUrl | relLangURL }}{{ end }}{{ if eq (path.Ext $linkUrl) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                       {{ else if in (slice "http" "https") $scheme }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-                      <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $iconName }}" {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
+                      <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $iconName }}" {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors flex items-center gap-1">
                         {{ partial "functions/get_icon" (dict "name" $iconName "attributes" "class=\"w-5 h-5\"") }}
+                        {{ if and (eq $iconName "envelope") (hasPrefix $linkUrl "mailto:") }}<span class="text-sm">{{ strings.TrimPrefix "mailto:" $linkUrl }}</span>{{ end }}
                       </a>
                     {{ end }}
                   {{ end }}
@@ -421,8 +422,9 @@
                   {{ if $linkUrl }}{{ $scheme := (urls.Parse $linkUrl).Scheme }}{{ $target := "" }}
                     {{ if not $scheme }}{{ if not (hasPrefix $linkUrl "#") }}{{ $linkUrl = $linkUrl | relLangURL }}{{ end }}{{ if eq (path.Ext $linkUrl) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
                     {{ else if in (slice "http" "https") $scheme }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-                    <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $iconName }}" {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors">
+                    <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} aria-label="{{ $iconName }}" {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }} class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors flex items-center gap-1">
                       {{ partial "functions/get_icon" (dict "name" $iconName "attributes" "class=\"w-5 h-5\"") }}
+                      {{ if and (eq $iconName "envelope") (hasPrefix $linkUrl "mailto:") }}<span class="text-sm">{{ strings.TrimPrefix "mailto:" $linkUrl }}</span>{{ end }}
                     </a>
                   {{ end }}
                 {{ end }}
