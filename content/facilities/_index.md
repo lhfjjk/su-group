@@ -14,21 +14,10 @@ sections:
       filters:
         folders:
           - projects
-      assigned_pages:
-        - projects/dft-computing-cluster
-        - projects/electrochemical-cell
-        - projects/flash-chromatography
-        - projects/ft-ir-spectrometer
-        - projects/gc-ms-system
-        - projects/glove-box
-        - projects/hplc-system
-        - projects/mass-spectrometer
-        - projects/microwave-reactor
-        - projects/nmr-spectrometer
-        - projects/photochemical-reactor
-        - projects/rotary-evaporator
-        - projects/schlenk-line
-        - projects/uv-vis-spectrometer
+      exclude_categories:
+        - Publications
+      include_types:
+        - page
     design:
       view: card
       columns: 3
