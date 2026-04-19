@@ -42,8 +42,9 @@ def inject_emails(html_path):
         
         new_open = add_classes(open_tag)
         
-        # Create the email text span with left padding (gap-1 is between icon and text)
-        email_span = f'<span class="text-sm ps-1">{email}</span>'
+        # Create the email text span with visible styling
+        # Use text-gray-900 (dark) and font-medium to make email clearly visible
+        email_span = f'<span class="text-gray-900 dark:text-gray-100 font-medium ps-1">{email}</span>'
         
         return f'{new_open}{inner_stripped}{email_span}{close_tag}'
     
