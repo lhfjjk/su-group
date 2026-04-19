@@ -54,7 +54,7 @@ jobs:
 
       - name: Build search index (Pagefind)
         run: |
-          npx pagefind --site public --output-path public/pagefind --language zh --language en
+          npx pagefind --site public --output-path public/pagefind
 
       - name: Restore static publications page
         run: |
