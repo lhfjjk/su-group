@@ -49,6 +49,13 @@ jobs:
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
+          # Force-copy local layouts override into theme module path
+          # This ensures our custom block.html with email text is used during build
+          if [ -f "layouts/blox/team-showcase/block.html" ]; then
+            mkdir -p "themes/wowchemy/modules/blox/blox/team-showcase/"
+            cp "layouts/blox/team-showcase/block.html" "themes/wowchemy/modules/blox/blox/team-showcase/block.html"
+            echo "Copied local block.html to theme path ($(wc -c < layouts/blox/team-showcase/block.html) bytes)"
+          fi
           hugo 2>&1 | tee hugo_build.log
           echo "---TAIZI-DEBUG-END---"
 
