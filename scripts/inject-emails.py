@@ -22,10 +22,13 @@ def inject_emails(html_path):
             if 'mailto:' not in inner:
                 return m.group(0)
             
-            # Add justify-center to the div class if not present
+            # Add justify-center AND w-full to the div class to center content in full width
             div_open = m.group(1)
+            new_classes = 'justify-center w-full'
             if 'justify-center' not in div_open:
-                div_open = div_open.replace('class="', 'class="justify-center ')
+                div_open = div_open.replace('class="', f'class="{new_classes} ')
+            elif 'w-full' not in div_open:
+                div_open = div_open.replace('justify-center', 'justify-center w-full')
             return div_open + m.group(2) + inner + close_tag
         
         new_content, n = re.subn(pattern, replace_div, content, flags=re.DOTALL)
