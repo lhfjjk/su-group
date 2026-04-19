@@ -8,7 +8,34 @@ def inject_emails(html_path):
     
     original_len = len(content)
     
-    # Find all <a> tags that have href="mailto:..." and aria-label="envelope"
+    # Step 1: Center the parent div that contains the mailto link
+    # The div has class="flex gap-3 pt-2 border-t..."
+    def center_parent_div(content):
+        # Find <div class="flex gap-3 pt-2 border-t..." followed by mailto link
+        pattern = r'(<div\s+class="flex gap-3 pt-2 border-t[^"]*")([^>]*>)(.*?)(</div>)'
+        
+        def replace_div(m):
+            open_tag = m.group(1) + m.group(2)
+            inner = m.group(3)
+            close_tag = m.group(4)
+            
+            if 'mailto:' not in inner:
+                return m.group(0)
+            
+            # Add justify-center to the div class if not present
+            div_open = m.group(1)
+            if 'justify-center' not in div_open:
+                div_open = div_open.replace('class="', 'class="justify-center ')
+            return div_open + m.group(2) + inner + close_tag
+        
+        new_content, n = re.subn(pattern, replace_div, content, flags=re.DOTALL)
+        if n > 0:
+            print(f'Centered {n} email container divs')
+        return new_content
+    
+    content = center_parent_div(content)
+    
+    # Step 2: Inject email text span inside the mailto anchor
     pattern = r'(<a\s+[^>]*href="mailto:([^"]+)"[^>]*aria-label="envelope"[^>]*>)(.*?)(</a>)'
     
     def replace_anchor(m):
@@ -42,9 +69,8 @@ def inject_emails(html_path):
         
         new_open = add_classes(open_tag)
         
-        # Create the email text span with visible styling
-        # Use text-gray-900 (dark) and font-medium to make email clearly visible
-        email_span = f'<span class="text-gray-900 dark:text-gray-100 font-medium ps-1">{email}</span>'
+        # Create the email text span — dark color, NOT bold
+        email_span = f'<span class="text-gray-700 dark:text-gray-200 ps-1">{email}</span>'
         
         return f'{new_open}{inner_stripped}{email_span}{close_tag}'
     
