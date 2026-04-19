@@ -1,0 +1,14 @@
+name:
+  display: 殷昌
+  slug: yin-chang
+role: 博士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:yinchang@fjirsm.ac.cn
+user_groups:
+- PhD Students
+avatar: media/authors/yin-chang.jpg
+weight: 33

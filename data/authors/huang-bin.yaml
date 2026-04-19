@@ -1,0 +1,14 @@
+name:
+  display: 黄斌
+  slug: huang-bin
+role: 硕士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:13843636712@163.com
+user_groups:
+- Master Students
+avatar: media/authors/huang-bin.jpg
+weight: 62

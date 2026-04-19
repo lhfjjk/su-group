@@ -1,0 +1,14 @@
+name:
+  display: 李弘毅
+  slug: li-hong-yi
+role: 其他
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:hyli@ptu.edu.cn
+user_groups:
+- Other Staff
+avatar: media/authors/li-hong-yi.jpg
+weight: 11

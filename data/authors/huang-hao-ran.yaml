@@ -1,0 +1,14 @@
+name:
+  display: 黄浩然
+  slug: huang-hao-ran
+role: 博士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:1004836576@qq.com
+user_groups:
+- PhD Students
+avatar: media/authors/huang-hao-ran.jpg
+weight: 31

@@ -1,0 +1,14 @@
+name:
+  display: 许缃雯
+  slug: xu-xiang-wen
+role: 博士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:XuXiangwen@fjirsm.ac.cn
+user_groups:
+- PhD Students
+avatar: media/authors/xu-xiang-wen.jpg
+weight: 33

@@ -1,0 +1,14 @@
+name:
+  display: 林平
+  slug: lin-ping
+role: 其他
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:pinglin@fjirsm.ac.cn
+user_groups:
+- Principal Investigators
+avatar: media/authors/lin-ping.jpg
+weight: 1

@@ -1,0 +1,14 @@
+name:
+  display: 刘格
+  slug: liu-ge
+role: 博士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:liuge@fjirsm.ac.cn
+user_groups:
+- PhD Students
+avatar: media/authors/liu-ge.jpg
+weight: 31

@@ -1,0 +1,14 @@
+name:
+  display: 刘思清
+  slug: liu-si-qing
+role: 博士后
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:liusiqing@fjirsm.ac.cn
+user_groups:
+- Postdoctoral Researchers
+avatar: media/authors/liu-si-qing.jpg
+weight: 21

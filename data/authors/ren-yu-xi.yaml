@@ -1,0 +1,14 @@
+name:
+  display: 任羽西
+  slug: ren-yu-xi
+role: 其他
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:yxren@fjirsm.ac.cn
+user_groups:
+- Other Staff
+avatar: media/authors/ren-yu-xi.jpg
+weight: 11

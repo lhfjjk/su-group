@@ -1,0 +1,14 @@
+name:
+  display: 杜宇
+  slug: du-yu
+role: 其他
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:duyu@fjirsm.ac.cn
+user_groups:
+- Principal Investigators
+avatar: media/authors/du-yu.jpg
+weight: 1

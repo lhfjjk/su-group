@@ -1,0 +1,14 @@
+name:
+  display: 阚剑
+  slug: kan-jian
+role: 其他
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:jkan@fjirsm.ac.cn
+user_groups:
+- Principal Investigators
+avatar: media/authors/kan-jian.jpg
+weight: 1

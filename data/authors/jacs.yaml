@@ -1,0 +1,14 @@
+name:
+  display: Jacs
+  slug: jacs
+role: 博士
+bio: ''
+interests: []
+affiliations: []
+links:
+- icon: envelope
+  url: mailto:miaomiaomiao@miao.con
+user_groups:
+- PhD Students
+avatar: media/authors/Jacs.jpg
+weight: 31
