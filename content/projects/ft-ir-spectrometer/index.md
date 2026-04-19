@@ -1,5 +1,5 @@
 ---
-title: "4"
+title: "Polarimeter"
 date: 2024-01-01
 type: page
 external_link: ""
@@ -9,8 +9,10 @@ categories:
 
 # Featured image
 image:
-  caption: "4"
+  caption: "Polarimeter"
   focal_point: Center
   preview_only: false
   filename: "fac262ec26fac6b6867cacf05086dd6.jpg"
+
+description: "用于测量化合物的旋光性，鉴定手性分子"
 ---
