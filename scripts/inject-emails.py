@@ -9,7 +9,6 @@ def inject_emails(html_path):
     original_len = len(content)
     
     # Find all <a> tags that have href="mailto:..." and aria-label="envelope"
-    # Pattern to match the full anchor tag (possibly across multiple lines)
     pattern = r'(<a\s+[^>]*href="mailto:([^"]+)"[^>]*aria-label="envelope"[^>]*>)(.*?)(</a>)'
     
     def replace_anchor(m):
@@ -22,15 +21,26 @@ def inject_emails(html_path):
         if f'>{email}</span>' in inner:
             return m.group(0)
         
-        # Add flex and gap-1 classes to the anchor if not present
-        if 'class="' in open_tag:
-            new_open = re.sub(
-                r'class="([^"]*)"',
-                lambda cm: f'class="{cm.group(1)} flex items-center gap-1"' if 'flex' not in cm.group(1) else cm.group(0),
-                open_tag, count=1
-            )
-        else:
-            new_open = open_tag.replace('<a ', '<a class="flex items-center gap-1" ')
+        # Add centering and gap classes to the anchor
+        def add_classes(tag):
+            # Extract current class value
+            cm = re.search(r'class="([^"]*)"', tag)
+            if cm:
+                current = cm.group(1)
+                # Add required classes if not present
+                needed = []
+                for cls in ['flex', 'items-center', 'justify-center', 'gap-1']:
+                    if cls not in current:
+                        needed.append(cls)
+                if needed:
+                    new_class = current + ' ' + ' '.join(needed)
+                    return tag.replace(f'class="{current}"', f'class="{new_class}"')
+            else:
+                # No class attribute, add one
+                return tag.replace('<a ', '<a class="flex items-center justify-center gap-1" ')
+            return tag
+        
+        new_open = add_classes(open_tag)
         
         # Create the email text span
         email_span = f'<span class="text-sm">{email}</span>'
@@ -52,8 +62,8 @@ def inject_emails(html_path):
     # Show a sample
     idx = new_content.find('mailto:')
     if idx >= 0:
-        start = max(0, idx - 50)
-        end = min(len(new_content), idx + 200)
+        start = max(0, idx - 30)
+        end = min(len(new_content), idx + 250)
         print(f'\nSample: ...{new_content[start:end]}...')
     
     return count
