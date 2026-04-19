@@ -14,10 +14,8 @@ sections:
       filters:
         folders:
           - projects
-      exclude_categories:
-        - Publications
-      tag_ids: []
-      exclude_tags: []
+        categories:
+          - Instruments
     design:
       view: card
       columns: 3
