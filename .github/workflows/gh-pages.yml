@@ -49,13 +49,15 @@ jobs:
         env:
           HUGO_CACHEDIR: /tmp/hugo_cache
         run: |
-          # Apply email text patch to theme block.html
-          if [ -f "scripts/team-showcase-block-patch.html" ]; then
-            cp "scripts/team-showcase-block-patch.html" "themes/wowchemy/modules/blox/blox/team-showcase/block.html"
-            echo "Patched theme block.html ($(wc -c < scripts/team-showcase-block-patch.html) bytes)"
-          fi
           hugo 2>&1 | tee hugo_build.log
           echo "---TAIZI-DEBUG-END---"
+      - name: Inject email text into team page
+        run: |
+          if [ -f "scripts/inject-emails.py" ]; then
+            python3 scripts/inject-emails.py public/team/index.html
+          else
+            echo "inject-emails.py not found, skipping"
+          fi
 
       - name: Build search index (Pagefind)
         run: |
