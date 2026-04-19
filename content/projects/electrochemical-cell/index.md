@@ -1,7 +1,8 @@
 ---
 title: "2"
 date: 2024-01-01
-external_link: ''
+type: page
+external_link: ""
 share: true
 
 # Featured image
@@ -10,5 +11,4 @@ image:
   focal_point: Center
   preview_only: false
   filename: "d06e39f518cbce4c03fdff710d9b1f3.jpg"
-
 ---
