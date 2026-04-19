@@ -11,7 +11,7 @@ sections:
   - block: markdown
     content:
       text: |
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:2rem;">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:0.5rem;">
 
         <div style="text-align:center;padding:1.5rem;background:white;border-radius:0.75rem;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
           <img src="https://lhfjjk.github.io/su-group/media/fe3b765fee4b33e1722ae24523d1421.jpg" style="width:100%;max-height:400px;object-fit:cover;border-radius:0.5rem;margin-bottom:1rem;">
