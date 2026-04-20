@@ -1998,21 +1998,37 @@
       </a>
     </div>
     
-    <input id="nav-toggle" type="checkbox" class="hidden" />
-    <label
-      for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center lg:hidden text-[var(--hb-color-header-fg)] lg:order-1">
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+    <button id="nav-toggle-btn" aria-label="Toggle navigation" class="order-3 cursor-pointer flex items-center lg:hidden text-[var(--hb-color-header-fg)] lg:order-1">
+      <svg id="hamburger-icon" class="h-6 fill-current block" viewBox="0 0 20 20">
         <title>Open Menu</title>
         <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
       </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+      <svg id="close-icon" class="h-6 fill-current hidden" viewBox="0 0 20 20">
         <title>Close Menu</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
+        <polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)"></polygon>
       </svg>
-    </label>
+    </button>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('nav-toggle-btn');
+        var menu = document.getElementById('nav-menu');
+        if (btn && menu) {
+          btn.addEventListener('click', function() {
+            menu.classList.toggle('show');
+            var isOpen = menu.classList.contains('show');
+            document.getElementById('hamburger-icon').classList.toggle('hidden', isOpen);
+            document.getElementById('close-icon').classList.toggle('hidden', !isOpen);
+          });
+          menu.querySelectorAll('a.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+              menu.classList.remove('show');
+              document.getElementById('hamburger-icon').classList.remove('hidden');
+              document.getElementById('close-icon').classList.add('hidden');
+            });
+          });
+        }
+      });
+    </script>
     
 
     
@@ -2108,6 +2124,16 @@
       
     </div>
   </nav>
+<style>
+#nav-menu { display: flex; }
+@media not all and (min-width: 64rem) {
+  #nav-menu.show { display: flex !important; }
+  #nav-menu { display: none !important; }
+}
+@media (min-width: 64rem) {
+  #nav-menu { display: flex !important; }
+}
+</style>
 </header>
 
 
