@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>document.addEventListener('DOMContentLoaded', function() { var cb = document.getElementById('nav-toggle'); if(cb) cb.checked = false; });</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -2000,7 +1999,7 @@
     </div>
     
     <input id="nav-toggle" type="checkbox" autocomplete="off" style="position:absolute;opacity:0;width:0;height:0;" />
-    <script>document.getElementById('nav-toggle').checked = false;</script>
+    <script>window.addEventListener('pageshow', function(e) { var cb = document.getElementById('nav-toggle'); if(cb) cb.checked = false; });</script>
     <label
       for="nav-toggle"
       class="order-3 cursor-pointer flex items-center lg:hidden text-[var(--hb-color-header-fg)] lg:order-1">
