@@ -1998,7 +1998,8 @@
       </a>
     </div>
     
-    <input id="nav-toggle" type="checkbox" style="position:absolute;opacity:0;width:0;height:0;" />
+    <input id="nav-toggle" type="checkbox" autocomplete="off" style="position:absolute;opacity:0;width:0;height:0;" />
+    <script>document.getElementById('nav-toggle').checked = false;</script>
     <label
       for="nav-toggle"
       class="order-3 cursor-pointer flex items-center lg:hidden text-[var(--hb-color-header-fg)] lg:order-1">
