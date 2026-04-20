@@ -21,8 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
           fetch-depth: 0
+
+      - name: Checkout wowchemy theme (fix invalid submodule ref)
+        run: |
+          git clone --depth 1 https://github.com/wowchemy/wowchemy-hugo-themes.git themes/wowchemy
+          cd themes/wowchemy
+          git fetch --depth 1 origin 3f5e979aa18f6f6721b1024729a28a474a222cd4
+          git checkout 3f5e979aa18f6f6721b1024729a28a474a222cd4
 
       - name: Setup Go
         uses: actions/setup-go@v5
