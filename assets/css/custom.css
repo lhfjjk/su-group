@@ -521,3 +521,8 @@ label[for="nav-toggle"] svg {
   max-height: 1.5rem !important;
 }
 /* ===== End Safari SVG fix ===== */
+
+/* === FIX: Hamburger menu JS toggle (replaces broken CSS checkbox hack) === */
+#nav-menu{display:flex}
+@media not all and (min-width:1024px){#nav-menu.show{display:flex!important}#nav-menu{display:none!important}}
+@media (min-width:1024px){#nav-menu{display:flex!important}}
