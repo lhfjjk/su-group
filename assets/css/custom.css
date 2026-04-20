@@ -526,3 +526,6 @@ label[for="nav-toggle"] svg {
 #nav-menu{display:flex}
 @media not all and (min-width:1024px){#nav-menu.show{display:flex!important}#nav-menu{display:none}}
 @media (min-width:1024px){#nav-menu{display:flex!important}}
+
+/* === FIX: Hamburger button (nav-toggle-btn) should not have blue background === */
+#nav-toggle-btn{background-color:transparent!important;border:none!important}
