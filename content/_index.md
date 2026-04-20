@@ -58,6 +58,6 @@ sections:
           icon: 'user-group'
         - title: 'Lab Facilities'
           text: 'Explore our state-of-the-art analytical equipment and experimental environment at ICCAS.'
-          url: '/su-group/projects/'
+          url: '/su-group/facilities/'
           icon: 'wrench-screwdriver'
 ---
