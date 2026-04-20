@@ -524,7 +524,7 @@ label[for="nav-toggle"] svg {
 
 /* === FIX: Hamburger menu JS toggle (replaces broken CSS checkbox hack) === */
 #nav-menu{display:flex}
-@media not all and (min-width:1024px){#nav-menu.show{display:flex!important}#nav-menu{display:none}}
+@media not all and (min-width:1024px){#nav-menu.show{display:flex!important;flex-direction:column!important}#nav-menu{display:none}}
 @media (min-width:1024px){#nav-menu{display:flex!important}}
 
 /* === FIX: Hamburger button (nav-toggle-btn) should not have blue background === */
