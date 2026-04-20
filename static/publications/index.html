@@ -1999,6 +1999,7 @@
     </div>
     
     <input id="nav-toggle" type="checkbox" autocomplete="off" style="position:absolute;opacity:0;width:0;height:0;" />
+    <script>document.getElementById('nav-toggle').checked=false;</script>
     <script>window.addEventListener('pageshow', function(e) { var cb = document.getElementById('nav-toggle'); if(cb) cb.checked = false; });</script>
     <label
       for="nav-toggle"
