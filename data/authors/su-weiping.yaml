@@ -2,6 +2,5 @@ name:
   display: Weiping Su
 title: Weiping Su
 role: Professor
-user_groups:
-  - Supervisor
+# Hidden from team page - only shown on home hero
 weight: 0
