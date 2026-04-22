@@ -44,20 +44,4 @@ sections:
         - title: 'Mechanistic Exploration'
           text: 'In-depth kinetic and computational studies to uncover the underlying logic of catalytic cycles.'
           icon: 'beaker'
-  - block: luminous-links
-    content:
-      title: 'Explore More'
-      items:
-        - title: 'Recent Publications'
-          text: 'View our latest peer-reviewed research in JACS, Angewandte Chemie, and Nature Communications.'
-          url: '/su-group/publications/'
-          icon: 'document-text'
-        - title: 'Our Team'
-          text: 'Meet the talented doctoral researchers and postdoctoral fellows driving our innovation.'
-          url: '/su-group/team/'
-          icon: 'user-group'
-        - title: 'Lab Facilities'
-          text: 'Explore our state-of-the-art analytical equipment and experimental environment at ICCAS.'
-          url: '/su-group/facilities/'
-          icon: 'wrench-screwdriver'
 ---
