@@ -17,9 +17,9 @@ sections:
         - Postdoctoral Researchers
         - PhD Students
         - Master Students
-        - Alumni
-      sort_by: weight
-      sort_ascending: true
+        - name: Alumni
+          sort_by: graduation_year
+          sort_ascending: false
     design:
       show_role: true
       show_organizations: false
